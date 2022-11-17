@@ -1,9 +1,26 @@
 body{
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(58, 55, 115) 0%, rgb(47, 45, 75) 100%);
+    background: linear-gradient(20deg, #6f7c75 0%, #536976 50%, #292e49 100%);
     color: aliceblue;
     font-family: Arial, Helvetica, ui-rounded;
     
+}
+
+.whiteblock{
+  
+  background-color: rgba(255, 255, 255, 0.096);
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.203);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.whiteblock:hover{
+  background-color: rgba(255, 255, 255, 0.121);
+  transition-duration: 300ms;
+  transform: scale(1.01);
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203);
 }
 
 h1{
@@ -25,20 +42,50 @@ h2:hover{
     letter-spacing: 0.25em;
     
 }
+
+.clickabletext{
+  display: inline;
+  text-decoration: none;
+  font-weight: 600;
+  color:#b5cfc1;
+  border-radius:5px;
+  padding:2px;
+  background-color:transparent;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.clickabletext:hover{
+  color:#536976;
+  background-color:#b5cfc1;
+}
+
 h3{
     font-size: 0.8rem; /* 14px */
     line-height: 1.5rem; /* 20px */
     letter-spacing: 0.2rem;
     text-align: center;
+    margin-top:2px;
 }
 ul {
-    list-style-position: inside;
+  list-style-position: outside;
     display: block;
     list-style-type: disc;
     line-height: 1.5rem;
     margin-bottom:5px;
+    margin-top:10px;
 }
 
+ulexp{
+  list-style-position: outside;
+  display: block;
+  list-style-type: disc;
+  line-height: 1.5rem;
+  margin-bottom:15px;
+  padding-left:10px;
+  margin-top:0px;
+}
 a{
     display: block;
 }
@@ -49,21 +96,9 @@ a{
 display:flex;
 flex-wrap: wrap;
 justify-content: space-between;
-background-color: rgba(255, 255, 255, 0.096);
 
-border-radius: 10px;
-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.203);
-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 150ms;
 }
 
-.lists:hover{
-    background-color: rgba(255, 255, 255, 0.121);
-    transition-duration: 300ms;
-    transform: scale(1.01);
-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203);
-}
 .languages{
     display:flex;
     border-radius: 10px;
@@ -74,22 +109,18 @@ box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203);
 .education{
     display:flex;
     padding:20px;
-    border-radius: 10px;
-    margin-top:10px;
-    margin-bottom:20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.203);
-    background-color: rgba(255, 255, 255, 0.096);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
 }
-.education:hover{
-    background-color: rgba(255, 255, 255, 0.121);
-    transition-duration: 300ms;
-    transform: scale(1.01);
-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203);
 
+.experience{
+  padding-top:10px;
+    padding-bottom:15px;
+}
+experiencetitle{
+  padding-top:10px;
+  font-size:18px;
+  font-weight: 700;
+  padding-bottom: 2px;
+  display: block;
 }
 
 unipoint{
@@ -176,21 +207,8 @@ unidates{
         border-radius: 15px;
         padding:10px;
         display: block;
+        padding-bottom:15px;
 
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.203);
-        background-color: rgba(255, 255, 255, 0.096);
-        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-
-      }
-
-      languageblock:hover{
-        background-color: rgba(255, 255, 255, 0.121);
-        transition-duration: 300ms;
-        transform: scale(1.01);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203);
-    
       }
 
       sidebar{
@@ -236,4 +254,11 @@ unidates{
         padding:10px;
         
         font-size: 30px;
+      }
+
+      experienceblock{
+        padding-top:10px;
+        padding-bottom:15px;
+    display:flex;
+    flex-wrap: wrap;
       }
