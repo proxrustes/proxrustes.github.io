@@ -1,6 +1,6 @@
 body{
     background: rgb(2,0,36);
-    background: linear-gradient(20deg, #9796f0 0%,  #e9b6c3 100%);
+    background: linear-gradient(20deg, #9796f0 0%,  #ddb6e9 100%);
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, ui-rounded;
     
@@ -10,10 +10,9 @@ body{
 .frontendSkill{
 display: inline;
 font-weight: 600;
-background: #e9b6c3;
+background: #e9b6d8;
 padding: 1px 10px 1px 10px;
 border-radius: 10px;
-cursor: pointer;
 }
 
 .backendSkill{
@@ -22,7 +21,6 @@ cursor: pointer;
   background: #b6b5f9;
   padding: 1px 10px 1px 10px;
   border-radius: 10px;
-  cursor: pointer;
   }
 
 .whiteblock{
