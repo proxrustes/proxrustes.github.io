@@ -1,6 +1,6 @@
 body{
     background: rgb(2,0,36);
-    background: linear-gradient(20deg, #9796f0 0%,  #ddb6e9 100%);
+    background: linear-gradient(20deg, #534666 0%,  #cd7672 100%);
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, ui-rounded;
     
@@ -10,7 +10,7 @@ body{
 .frontendSkill{
 display: inline;
 font-weight: 600;
-background: #e9b6d8;
+background: #dc8665;
 padding: 1px 10px 1px 10px;
 border-radius: 10px;
 }
@@ -18,7 +18,7 @@ border-radius: 10px;
 .backendSkill{
   display: inline;
   font-weight: 600;
-  background: #b6b5f9;
+  background: #534666;
   padding: 1px 10px 1px 10px;
   border-radius: 10px;
   }
@@ -71,7 +71,7 @@ h2:hover{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  color:#bfa7cf;
+  color:#cd7672;
   background-color:#ffffffc9;
 }
 .clickabletext:hover{
