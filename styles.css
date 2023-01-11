@@ -5,7 +5,16 @@ body{
     font-family: 'Trebuchet MS', sans-serif;
     
 }
-
+.heading{
+  margin-bottom: 0;
+  padding: 0;
+  padding-top: 15px;
+}
+.subheading{
+padding: 0;
+color: #ffffffd0;
+padding-bottom: 10px;
+}
 
 .frontendSkill{
 display: inline;
