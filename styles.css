@@ -222,6 +222,16 @@ unidates{
     color: #ffffffe1;
     transform: scale(1.05);
 }
+.fa-solid{
+  color: #ffffffbc;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.fa-solid:hover{
+  color: #ffffffe1;
+  transform: scale(1.05);
+}
       .dotnb{
         width:2vh;
         height:2vh;
