@@ -5,6 +5,12 @@ body{
     font-family: 'Trebuchet MS', sans-serif;
     
 }
+body#index{
+  background: cadetblue;
+  color: rgb(255, 255, 255);
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 p{
   font-size: 2.5vh;
 }
