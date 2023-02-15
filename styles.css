@@ -5,25 +5,186 @@ body{
     font-family: 'Trebuchet MS', sans-serif;
     
 }
-body#index{
-  background: cadetblue;
-  color: rgb(255, 255, 255);
-  font-family: 'Trebuchet MS', sans-serif;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+  .top-div{
+    display: block;
+  }
+  p{
+    font-size: 2vh;
+  }
+  .hard-skills-div{
+    width:80vw; height:90%
+  }
+  h1{
+    padding-top: 4vh;
+    padding-bottom:4vh;
+    letter-spacing: 0.2vh;
+    font-size: 5vh; /* 24px */
+line-height: 4vh; 
+}
+socialmedialist{
+  margin:1vh;
+  width:8vw;
+  display:grid;
+  grid-template-rows: 6vw 6vw 6vw 6vw;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2vw;
+}   
+li-media{
+  display:block;
+  padding:2vh;
+  font-size: 4vw;
+}
 }
 
-p{
-  font-size: 2.5vh;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { 
+  .top-div{
+    display: block;
+  }
+  p{
+    font-size: 2vh;
+  }
+  .hard-skills-div{
+    width:80vw; height:90%
+  }
+  
+  h1{
+    padding-top: 4vh;
+    padding-bottom:4vh;
+    letter-spacing: 0.2vh;
+    font-size: 5vh; /* 24px */
+line-height: 2vh; 
+}
+socialmedialist{
+  margin:1vh;
+  width:5vh;
+  display:grid;
+  grid-template-rows: 4vh 4vh 4vh 4vh;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2vh;
+}   
+li-media{
+  display:block;
+  padding:2vh;
+  
+  font-size: 5vh;
+}
 }
 
-@media only screen and (max-width: 500px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+  .top-div{
+    display: flex;
+    justify-content: space-between;
+  }
+  p{
+    font-size: 2vh;
+  }
+  .hard-skills-div{
+    width:27vw; height:90%
+  }
+  h1{
+    padding-top: 4vh;
+    padding-bottom:4vh;
+    letter-spacing: 0.2vh;
+    font-size: 5vh; /* 24px */
+line-height: 2vh; 
+}
+socialmedialist{
+  margin:1vh;
+  width:8vh;
+  display:grid;
+  grid-template-rows: 6vh 6vh 6vh 6vh;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2vh;
+}   
+li-media{
+  display:block;
+  padding:2vh;
+  
+  font-size: 5vh;
+}
+}
 
-  .lines {
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+  .top-div{
+    display: flex;
+    justify-content: space-between;
+  }
+  p{
+    font-size: 2vh;
+  }
+  .hard-skills-div{
+    width:27vw; height:90%
+  }
+  h1{
+    padding-top: 4vh;
+    padding-bottom:4vh;
+    letter-spacing: 0.2vh;
+    font-size: 5vh; /* 24px */
+line-height: 2vh; 
+}
+socialmedialist{
+  margin:1vh;
+  width:8vh;
+  display:grid;
+  grid-template-rows: 6vh 6vh 6vh 6vh;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2vh;
+}   
+li-media{
+  display:block;
+  padding:2vh;
   
-  background-color: lightblue;
-  
+  font-size: 5vh;
+}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+  .top-div{
+    display: flex;
+    justify-content: space-between;
+  }
+  p{
+    font-size: 2vh;
   }
   
+  .hard-skills-div{
+    width:27vw; height:90%
   }
+  h1{
+    padding-top: 4vh;
+    padding-bottom:4vh;
+    letter-spacing: 0.2vh;
+    font-size: 5vh; /* 24px */
+line-height: 2vh; 
+}
+socialmedialist{
+  margin:1vh;
+  width:8vh;
+  display:grid;
+  grid-template-rows: 6vh 6vh 6vh 6vh;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2vh;
+}   
+li-media{
+  display:block;
+  padding:2vh;
+  
+  font-size: 5vh;
+}
+}
+
 
 li{
   font-size: 2.5vh;
@@ -73,13 +234,6 @@ border-radius: 2vh;
 box-shadow: 0px 0px 3vh rgba(0, 0, 0, 0.203);
 }
 
-h1{
-    padding-top: 4vh;
-    padding-bottom:4vh;
-    letter-spacing: 0.2vh;
-    font-size: 5vh; /* 24px */
-line-height: 2vh; 
-}
 
 h2{
     font-size: 3vh; /* 14px */
@@ -299,21 +453,7 @@ unidates{
       }
 
 
-      socialmedialist{
-        margin:1vh;
-        width:8vh;
-        display:grid;
-        grid-template-rows: 6vh 6vh 6vh 6vh;
-        align-items: center;
-        justify-items: center;
-        row-gap: 2vh;
-      }
-      li-media{
-        display:block;
-        padding:2vh;
-        
-        font-size: 5vh;
-      }
+  
 
       experienceblock{
         padding-top:2vh;
