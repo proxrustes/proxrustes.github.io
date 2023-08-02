@@ -12,37 +12,31 @@
     <div class="right-wrapper">
     <section id="know-me">
       <h2>Get to know me as:</h2>
-      <a onclick="openRole('production-manager')">Production Manager</a>
-      <a onclick="openRole('boom-operator')">Boom Operator</a>
-      <a onclick="openRole('editor')">Editor</a>
-      <a onclick="openRole('photographer')">Photographer</a>
+      <a class="section-a" onclick="openRole('projects')">PROJECTS</a>
+      <a onclick="openRole('education')">EDUCATION</a>
     </section>
 
-    <section id="production-manager" class="role-section" style="display: none;">
+    <section id="projects" class="role-section" style="display: none;">
       <div class="project-wrapper">
         <h2 class="title">Major Project</h2>
-        <h3 class="role">production manager</h3>
-        <p>July 2023</p>
-<ul class="resp-list">
-<li>casting</li>
-<li>doing shit</li>
-<li>pressuring ppl</li>
-
-</ul>
+        <h3 class="role">Production Manager</h3>
+        <p class="date">July 2023</p>
+      
+        
+        <div id="project-details" style="display: none;">
+          <ul class="resp-list">
+            <li>casting</li>
+            <li>doing shit</li>
+            <li>pressuring ppl</li>
+          </ul>
+        </div>
+        <a class="button-a" onclick="toggleProjectDetails('project-details')">details</a>
       </div>
-
+      
     </section>
 
-    <section id="boom-operator" class="role-section" style="display: none;">
-      Content about Boom Operator role
-    </section>
-
-    <section id="editor" class="role-section" style="display: none;">
-      Content about Editor role
-    </section>
-
-    <section id="photographer" class="role-section" style="display: none;">
-      Content about Photographer role
+    <section id="education" class="role-section" style="display: none;">
+      Content about education
     </section>
   </div>
 </div>

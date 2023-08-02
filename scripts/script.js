@@ -8,3 +8,13 @@ function openRole(roleId) {
     document.getElementById(roleId).style.display = "block";
   }
   
+  function toggleProjectDetails(detailsId) {
+    let details = document.getElementById(detailsId);
+  
+    if (details.style.display === "none") {
+      details.style.display = "block";
+    } else {
+      details.style.display = "none";
+    }
+  }
+  
