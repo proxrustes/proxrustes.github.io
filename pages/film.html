@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Film Student Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/film.css">
+  </head>
+  <body>
+    <h1>Film Student Portfolio</h1>
+    
+    <section id="know-me">
+      <h2>Get to know me as:</h2>
+      <button onclick="openRole('production-manager')">Production Manager</button>
+      <button onclick="openRole('boom-operator')">Boom Operator</button>
+      <button onclick="openRole('editor')">Editor</button>
+      <button onclick="openRole('photographer')">Photographer</button>
+    </section>
+
+    <section id="production-manager" class="role-section" style="display: none;">
+      <h1>Content about Production Manager role</h1>
+    </section>
+
+    <section id="boom-operator" class="role-section" style="display: none;">
+      Content about Boom Operator role
+    </section>
+
+    <section id="editor" class="role-section" style="display: none;">
+      Content about Editor role
+    </section>
+
+    <section id="photographer" class="role-section" style="display: none;">
+      Content about Photographer role
+    </section>
+
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
