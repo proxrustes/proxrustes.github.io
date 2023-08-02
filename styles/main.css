@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: black;
+    color: rgb(228, 237, 237);
   }
   
   button {
@@ -7,3 +9,6 @@ body {
     padding: 10px;
   }
   
+  h1{
+    text-align: center;
+  }

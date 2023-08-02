@@ -2,17 +2,20 @@
 <html>
   <head>
     <title>Film Student Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles/film.css">
+    <link rel="stylesheet" type="text/css" href="../styles/film.css">
   </head>
-  <body>
-    <h1>Film Student Portfolio</h1>
-    
+  <h1>Film Student Portfolio</h1>
+  <div class="flex-section">
+    <div class="left-wrapper">
+    <img class="avatar" src="https://pbs.twimg.com/media/Ezvtz27X0AISLtp?format=jpg&name=medium"/>
+  </div>
+    <div class="right-wrapper">
     <section id="know-me">
       <h2>Get to know me as:</h2>
-      <button onclick="openRole('production-manager')">Production Manager</button>
-      <button onclick="openRole('boom-operator')">Boom Operator</button>
-      <button onclick="openRole('editor')">Editor</button>
-      <button onclick="openRole('photographer')">Photographer</button>
+      <a onclick="openRole('production-manager')">Production Manager</a>
+      <a onclick="openRole('boom-operator')">Boom Operator</a>
+      <a onclick="openRole('editor')">Editor</a>
+      <a onclick="openRole('photographer')">Photographer</a>
     </section>
 
     <section id="production-manager" class="role-section" style="display: none;">
@@ -30,7 +33,8 @@
     <section id="photographer" class="role-section" style="display: none;">
       Content about Photographer role
     </section>
-
+  </div>
+</div>
     <script src="../scripts/script.js"></script>
   </body>
 </html>
