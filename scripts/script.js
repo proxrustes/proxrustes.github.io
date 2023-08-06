@@ -9,12 +9,21 @@ function openRole(roleId) {
   }
   
   function toggleProjectDetails(detailsId) {
-    let details = document.getElementById(detailsId);
+    let modal = document.getElementById(detailsId);
+    modal.style.display = "block";
   
-    if (details.style.display === "none") {
-      details.style.display = "block";
-    } else {
-      details.style.display = "none";
+    let span = modal.getElementsByClassName("close")[0];
+  
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
   }
+  
+  
   
