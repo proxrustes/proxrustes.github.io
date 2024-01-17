@@ -2,7 +2,7 @@ const Education = {
   ENG: [
     {
       title: "BA in Computer Systems Engineering and Robotics",
-      time: "September 2021 - JULY 2025",
+      time: "September 2021 - July 2025",
       where:
         "National Technical University of Ukraine 'Kyiv Polytechnic Institute",
     },
@@ -13,12 +13,69 @@ const Education = {
     },
     {
       title: "Web applications with JavaScript",
-      time: "MAY 2022",
+      time: "May 2022",
       where: "BINARY STUDIO",
     },
-    { title: "Advanced SQL", time: "APRIL 2022", where: "ITVDN" },
+    { title: "Advanced SQL", time: "April 2022", where: "ITVDN" },
   ],
   ESP: [
+    {
+      title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
+      time: "Septiembre de 2021 - JULIO de 2025",
+      where:
+        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+    },
+    {
+      title: "Administración y Dirección de Empresas",
+      time: "Abril de 2022 - Abril de 2023",
+      where: "Escuela de Economía y Derecho de Berlín",
+    },
+    {
+      title: "Aplicaciones web con JavaScript",
+      time: "MAYO de 2022",
+      where: "BINARY STUDIO",
+    },
+    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+  ],
+  DE: [
+    {
+      title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
+      time: "Septiembre de 2021 - JULIO de 2025",
+      where:
+        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+    },
+    {
+      title: "Administración y Dirección de Empresas",
+      time: "Abril de 2022 - Abril de 2023",
+      where: "Escuela de Economía y Derecho de Berlín",
+    },
+    {
+      title: "Aplicaciones web con JavaScript",
+      time: "MAYO de 2022",
+      where: "BINARY STUDIO",
+    },
+    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+  ],
+  UKR: [
+    {
+      title: "Програмне забезпечення робототехнічних систем",
+      time: "Вересень 2021 - Червень 2025",
+      where:
+        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+    },
+    {
+      title: "Administración y Dirección de Empresas",
+      time: "Abril de 2022 - Abril de 2023",
+      where: "Escuela de Economía y Derecho de Berlín",
+    },
+    {
+      title: "Aplicaciones web con JavaScript",
+      time: "MAYO de 2022",
+      where: "BINARY STUDIO",
+    },
+    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+  ],
+  RUS: [
     {
       title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
       time: "Septiembre de 2021 - JULIO de 2025",
@@ -41,9 +98,9 @@ const Education = {
 
 function createEducationHtml(edu) {
   return `
-        <div class="skill">
+        <div class="education">
         <p>${edu.time}</p>
-        <div class="skill-container">
+        <div class="education-container">
         <h2>${edu.title}</h2>
         <h5>${edu.where}</h5>
         </div>
