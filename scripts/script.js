@@ -1,10 +1,14 @@
 function initTabs() {
-  const tabs = document.querySelectorAll(".menu a");
+  const tabs = document.querySelectorAll(".menu li");
   const containers = document.querySelectorAll(".content-container");
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", function (event) {
       event.preventDefault();
+      tabs.forEach((t) => t.classList.remove("selected"));
+
+      this.classList.add("selected");
+
       hideAllContainers(containers);
       showTargetContainer(this.getAttribute("data-target"));
     });
