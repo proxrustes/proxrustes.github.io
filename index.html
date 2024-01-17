@@ -1,12 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Main Page</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
   </head>
   <body>
-    <h1>Welcome to My Portfolio</h1>
-    <button onclick="location.href='pages/film.html'">Film Resume</button>
-    <button onclick="location.href='pages/engineering.html'">Engineering Resume</button>
+    <div class="layout-grid">
+      <div class="sidebar">
+        <h3>hello, i'm</h3>
+        <h2>Nastya: berlin-based front-end developer</h2>
+
+        <ul>
+          <li>skills</li>
+          <li>education</li>
+          <li>experience</li>
+          <li>miscellaneous</li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div id="post-container"></div>
+      </div>
+    </div>
   </body>
+  <script src="scripts/script.js"></script>
 </html>

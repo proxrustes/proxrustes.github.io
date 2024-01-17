@@ -1,14 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: rgb(228, 237, 237);
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px;
-  }
-  
-  h1{
-    text-align: center;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: rgb(228, 237, 237);
+}
+
+.layout-grid {
+  display: flex;
+}
+.sidebar {
+  width: 500px;
+}
