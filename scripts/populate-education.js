@@ -42,9 +42,11 @@ const Education = {
 function createEducationHtml(edu) {
   return `
         <div class="skill">
-            <h2>${edu.title}</h2>
-            <h3>${edu.where}</h3>
-            <p>${edu.time}</p>
+        <p>${edu.time}</p>
+        <div class="skill-container">
+        <h2>${edu.title}</h2>
+        <h5>${edu.where}</h5>
+        </div>
         </div>
     `;
 }
