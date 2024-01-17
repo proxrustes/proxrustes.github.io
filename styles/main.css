@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Koulen';
+  font-weight: 200;
   background-color: #1e1e1e;
   color: rgb(228, 237, 237);
 }
@@ -30,10 +31,26 @@ a {
   cursor: pointer;
 }
 
+.menu li {
+  border-bottom: 1px solid white;
+  margin-top: 15px;
+}
+
 .menu {
   list-style-type: none;
-  & li {
-    border-bottom: 1px solid white;
-    margin-top: 15px;
-  }
+}
+
+
+.intro .subtitle{
+  font-size: 22px;
+
+}
+
+.intro .title{
+  font-size: 46px;
+  line-height: 30px;
+}
+
+.red-text{
+  color: #BB4430;
 }

@@ -1,26 +1,41 @@
 const Posts = {
   ENG: [
-    { title: "name1", description: "description1", subtitle: "", imageURL: "" },
-    { title: "name2", description: "description2", subtitle: "", imageURL: "" },
-    { title: "name3", description: "description3", subtitle: "", imageURL: "" },
+    {
+      title: "ReactDay Berlin",
+      description: "description1",
+      subtitle: "volunteer",
+      imageURL: "",
+    },
+    {
+      title: "TestJS Summit Berlin",
+      description: "description3",
+      subtitle: "volunteer",
+      imageURL: "",
+    },
+    {
+      title: "PyCon 2023",
+      description: "",
+      subtitle: "attendee",
+      imageURL: "",
+    },
   ],
   ESP: [
     {
-      title: "name1ENS",
+      title: "ReactDay Berlin",
       description: "description1",
-      subtitle: "",
+      subtitle: "volunteer",
       imageURL: "",
     },
     {
-      title: "name1ENS",
-      description: "description2",
-      subtitle: "",
-      imageURL: "",
-    },
-    {
-      title: "name1ENS",
+      title: "TestJS Summit Berlin",
       description: "description3",
-      subtitle: "",
+      subtitle: "volunteer",
+      imageURL: "",
+    },
+    {
+      title: "PyCon 2023",
+      description: "",
+      subtitle: "attendee",
       imageURL: "",
     },
   ],
@@ -39,7 +54,7 @@ function populatePosts(language) {
   const Container = document.getElementById("miscellaneous-container");
   Container.innerHTML = "";
 
-  const posts = Posts[language] || []; 
+  const posts = Posts[language] || [];
 
   posts.forEach((post) => {
     const Html = createPostHtml(post);
