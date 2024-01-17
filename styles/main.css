@@ -4,13 +4,34 @@ body {
   color: rgb(228, 237, 237);
 }
 
-.layout-grid {
+.header {
   display: flex;
+  justify-content: flex-end;
 }
-.sidebar {
-  width: 500px;
+.layout-grid {
+  margin: 10px 20px 0 20px;
+   display: grid;
+  grid-template-columns: 500px auto;
+  gap: 60px;
+}
+.main-content{
+
 }
 
-a{
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+a {
   cursor: pointer;
+}
+
+.menu {
+  list-style-type: none;
+  & li {
+    border-bottom: 1px solid white;
+    margin-top: 15px;
+  }
 }
