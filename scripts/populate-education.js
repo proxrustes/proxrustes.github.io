@@ -21,7 +21,7 @@ const Education = {
   ESP: [
     {
       title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
-      time: "Septiembre de 2021 - JULIO de 2025",
+      time: "Septiembre de 2021 - Julio de 2025",
       where:
         "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
     },
@@ -32,7 +32,7 @@ const Education = {
     },
     {
       title: "Aplicaciones web con JavaScript",
-      time: "MAYO de 2022",
+      time: "Mayo de 2022",
       where: "BINARY STUDIO",
     },
     { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },

@@ -1,0 +1,37 @@
+.sidebar {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+  }
+  
+  .menu li {
+    color: #c1c1c1;
+    border-bottom: 2px solid #c1c1c1;
+    margin: 0;
+    margin-top: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+  
+    line-height: 24px;
+    cursor: pointer;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .menu li.selected {
+    color: #bb4430;
+    border-color: #bb4430;
+  }
+  .intro .subtitle {
+    font-size: 20px;
+    color: #b9b9b9;
+  }
+  
+  .intro .title {
+    font-size: 40px;
+    line-height: 30px;
+  }
