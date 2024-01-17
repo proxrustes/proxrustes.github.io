@@ -10,3 +10,7 @@ body {
 .sidebar {
   width: 500px;
 }
+
+a{
+  cursor: pointer;
+}

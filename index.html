@@ -7,18 +7,45 @@
   <body>
     <div class="layout-grid">
       <div class="sidebar">
-        <h3>hello, i'm</h3>
-        <h2>Nastya: berlin-based front-end developer</h2>
+        <h3>HELLO, I'M</h3>
+        <h2>NASTYA: berlin-based front-end developer</h2>
 
-        <ul>
-          <li>skills</li>
-          <li>education</li>
-          <li>experience</li>
-          <li>miscellaneous</li>
+        <ul class="menu">
+          <li><a id="skills-tab" data-target="skills-container">skills</a></li>
+          <li>
+            <a id="education-tab" data-target="education-container"
+              >education</a
+            >
+          </li>
+          <li>
+            <a id="experience-tab" data-target="experience-container"
+              >experience</a
+            >
+          </li>
+          <li>
+            <a id="miscellaneous-tab" data-target="miscellaneous-container"
+              >miscellaneous</a
+            >
+          </li>
         </ul>
       </div>
       <div class="main-content">
-        <div id="post-container"></div>
+        <div id="skills-container" class="content-container">1</div>
+        <div
+          id="education-container"
+          class="content-container"
+          style="display: none"
+        >2</div>
+        <div
+          id="experience-container"
+          class="content-container"
+          style="display: none"
+        >3</div>
+        <div
+          id="miscellaneous-container"
+          class="content-container"
+          style="display: none"
+        >4</div>
       </div>
     </div>
   </body>
