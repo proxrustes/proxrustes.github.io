@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
   </head>
   <body>
-    <div class="header"><div><a>ENG</a> / <a>ESP</a>  </div></div>
+    <div class="header">
+      <div class="languages"> <a id="lang-eng">ENG</a> / <a id="lang-esp">ESP</a></div>
+    </div>
     <div class="layout-grid">
       <div></div>
       <div class="sidebar">
@@ -32,26 +34,31 @@
         </ul>
       </div>
       <div class="main-content">
-        <div id="skills-container" class="content-container">1</div>
+        <div
+          id="skills-container"
+          style="display: none"
+          class="content-container"
+        ></div>
         <div
           id="education-container"
           class="content-container"
           style="display: none"
-        >2</div>
+        ></div>
         <div
           id="experience-container"
           class="content-container"
           style="display: none"
-        >3</div>
+        ></div>
         <div
           id="miscellaneous-container"
           class="content-container"
           style="display: none"
-        >4</div>
+        ></div>
       </div>
     </div>
   </body>
   <script src="scripts/script.js"></script>
+  <script src="scripts/language-settings.js"></script>
   <script src="scripts/populate-posts.js"></script>
   <script src="scripts/populate-work.js"></script>
   <script src="scripts/populate-education.js"></script>

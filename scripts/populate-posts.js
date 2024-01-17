@@ -1,8 +1,29 @@
-const Posts = [
+const PostsENG = [
   { title: "name1", description: "description1", subtitle: "", imageURL: "" },
   { title: "name2", description: "description2", subtitle: "", imageURL: "" },
   { title: "name3", description: "description3", subtitle: "", imageURL: "" },
 ];
+const PostsESP = [
+  {
+    title: "name1ENS",
+    description: "description1",
+    subtitle: "",
+    imageURL: "",
+  },
+  {
+    title: "name1ENS",
+    description: "description2",
+    subtitle: "",
+    imageURL: "",
+  },
+  {
+    title: "name1ENS",
+    description: "description3",
+    subtitle: "",
+    imageURL: "",
+  },
+];
+
 function createPostHtml(post) {
   return `
         <div class="post">
@@ -11,15 +32,23 @@ function createPostHtml(post) {
         </div>
     `;
 }
-function populatePosts() {
-  const Container = document.getElementById("miscellaneous-container");
 
-  Posts.forEach((post) => {
+function populatePosts(language) {
+  const Container = document.getElementById("miscellaneous-container");
+  Container.innerHTML = "";
+
+  let posts = language === "ESP" ? PostsESP : PostsENG;
+
+  posts.forEach((post) => {
     const Html = createPostHtml(post);
     Container.insertAdjacentHTML("beforeend", Html);
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  populatePosts();
+window.addEventListener("languageChanged", (event) => {
+  populatePosts(event.detail);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  populatePosts(getStoredLanguage());
 });

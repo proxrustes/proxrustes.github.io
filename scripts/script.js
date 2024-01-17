@@ -22,6 +22,7 @@ function showTargetContainer(targetId) {
   targetContainer.style.display = "block";
 }
 
+// loading
 document.addEventListener("DOMContentLoaded", function () {
   initTabs();
 });
