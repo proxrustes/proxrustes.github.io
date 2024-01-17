@@ -1,28 +1,30 @@
-const PostsENG = [
-  { title: "name1", description: "description1", subtitle: "", imageURL: "" },
-  { title: "name2", description: "description2", subtitle: "", imageURL: "" },
-  { title: "name3", description: "description3", subtitle: "", imageURL: "" },
-];
-const PostsESP = [
-  {
-    title: "name1ENS",
-    description: "description1",
-    subtitle: "",
-    imageURL: "",
-  },
-  {
-    title: "name1ENS",
-    description: "description2",
-    subtitle: "",
-    imageURL: "",
-  },
-  {
-    title: "name1ENS",
-    description: "description3",
-    subtitle: "",
-    imageURL: "",
-  },
-];
+const Posts = {
+  ENG: [
+    { title: "name1", description: "description1", subtitle: "", imageURL: "" },
+    { title: "name2", description: "description2", subtitle: "", imageURL: "" },
+    { title: "name3", description: "description3", subtitle: "", imageURL: "" },
+  ],
+  ESP: [
+    {
+      title: "name1ENS",
+      description: "description1",
+      subtitle: "",
+      imageURL: "",
+    },
+    {
+      title: "name1ENS",
+      description: "description2",
+      subtitle: "",
+      imageURL: "",
+    },
+    {
+      title: "name1ENS",
+      description: "description3",
+      subtitle: "",
+      imageURL: "",
+    },
+  ],
+};
 
 function createPostHtml(post) {
   return `
@@ -37,7 +39,7 @@ function populatePosts(language) {
   const Container = document.getElementById("miscellaneous-container");
   Container.innerHTML = "";
 
-  let posts = language === "ESP" ? PostsESP : PostsENG;
+  const posts = Posts[language] || []; 
 
   posts.forEach((post) => {
     const Html = createPostHtml(post);
@@ -47,8 +49,4 @@ function populatePosts(language) {
 
 window.addEventListener("languageChanged", (event) => {
   populatePosts(event.detail);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  populatePosts(getStoredLanguage());
 });

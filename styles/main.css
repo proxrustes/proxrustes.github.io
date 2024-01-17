@@ -17,7 +17,9 @@ body {
 .main-content{
 
 }
-
+.languages a.selected {
+  color: red;
+}
 .sidebar {
     position: fixed;
     top: 0;

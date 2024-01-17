@@ -1,4 +1,4 @@
-const Work = [
+const Work = {ENG: [
   {
     title: "Catenion GmbH",
     time: "December 2022 - Current time",
@@ -22,8 +22,9 @@ const Work = [
     ],
   },
   { title: "name3", time: "description1", tasks: ["1", "1"] },
-];
+],
 
+}
 function createWorkHtml(workItem) {
   const tasksHtml = workItem.tasks.map((task) => `<li>${task}</li>`).join("");
   return `
@@ -35,14 +36,17 @@ function createWorkHtml(workItem) {
     `;
 }
 
-function populateExp() {
+function populateExp(language) {
   const Container = document.getElementById("experience-container");
+  Container.innerHTML = "";
 
-  Work.forEach((work) => {
+  const work = Work[language] || []; 
+  work.forEach((work) => {
+    
     const Html = createWorkHtml(work);
     Container.insertAdjacentHTML("beforeend", Html);
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
-  populateExp();
+window.addEventListener("languageChanged", (event) => {
+  populateExp(event.detail);
 });
