@@ -64,8 +64,28 @@ a {
   color: #bb4430;
 }
 
-.post h1 {
-  margin-top: 0;
+.post h2 {
+  margin: 0;
+  font-weight: 400;
+}
+.post h4 {
+  line-height: 10px;
+  margin: 0;
+  font-weight: 400;
+  color: #c1c1c1;
+}
+.post img{
+  object-fit: cover;
+}
+.post p {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.post{
+  display: grid;
+  grid-template-columns: 300px auto;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .skill-container {

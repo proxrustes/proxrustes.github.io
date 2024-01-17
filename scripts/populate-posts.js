@@ -13,11 +13,18 @@ const Posts = {
       imageURL: "",
     },
     {
+      title: "Vector DB & LLM Hackathon",
+      description: "",
+      subtitle: "participant",
+      imageURL: "images/hacathon.jpg",
+    },
+    {
       title: "PyCon 2023",
       description: "",
       subtitle: "attendee",
       imageURL: "",
     },
+  
   ],
   ESP: [
     {
@@ -44,8 +51,13 @@ const Posts = {
 function createPostHtml(post) {
   return `
         <div class="post">
-            <h1>${post.title}</h1>
+        <img src="${post.imageURL}" width="300" height="200">
+        <div class="post-info">
+          <h2>${post.title}</h2>
+          <h4>${post.subtitle}</h4>
             <p>${post.description}</p>
+        </div>
+          
         </div>
     `;
 }
