@@ -69,7 +69,7 @@ const Education = {
       where: "Hochschule fur Wirtschaft und Recht Berlin",
     },
     {
-      title: "Aplicaciones web con JavaScript",
+      title: "Веб-розробка з JavaScript",
       time: "Травень 2022",
       where: "BINARY STUDIO",
     },
