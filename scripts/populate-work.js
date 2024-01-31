@@ -224,8 +224,8 @@ function createWorkHtml(workItem) {
   const tasksHtml = workItem.tasks.map((task) => `<li>${task}</li>`).join("");
   return `
         <div class="work-item">
+        <p>${workItem.time}</p>
             <h2>${workItem.title}</h2>
-            <p><strong>Time:</strong> ${workItem.time}</p>
             <ul>${tasksHtml}</ul>
         </div>
     `;

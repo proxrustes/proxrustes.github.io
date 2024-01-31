@@ -39,60 +39,60 @@ const Education = {
   ],
   DE: [
     {
-      title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
-      time: "Septiembre de 2021 - JULIO de 2025",
+      title: "Bachelor in Computer Systems Engineering und Robotik",
+      time: "September 2021 - Juli 2025",
       where:
-        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+        "Nationale Technische Universität der Ukraine 'Kiewer Polytechnisches Institut'",
     },
     {
       title: "Administración y Dirección de Empresas",
-      time: "Abril de 2022 - Abril de 2023",
-      where: "Escuela de Economía y Derecho de Berlín",
+      time: "April 2022 - April 2023",
+      where: "Hochschule fur Wirtschaft und Recht Berlin",
     },
     {
-      title: "Aplicaciones web con JavaScript",
-      time: "MAYO de 2022",
+      title: "Webanwendungen mit JavaScript",
+      time: "Mai 2022",
       where: "BINARY STUDIO",
     },
-    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+    { title: "Fortgeschrittenes SQL", time: "April 2022", where: "ITVDN" },
   ],
   UKR: [
     {
       title: "Програмне забезпечення робототехнічних систем",
       time: "Вересень 2021 - Червень 2025",
       where:
-        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+        "Національний технічний університет України 'Київський політехнічний інститут імені Ігоря Сікорського'",
     },
     {
-      title: "Administración y Dirección de Empresas",
-      time: "Abril de 2022 - Abril de 2023",
-      where: "Escuela de Economía y Derecho de Berlín",
+      title: "Бізнес-адміністрування та управління",
+      time: "Квітень 2022 - Квітень 2023",
+      where: "Hochschule fur Wirtschaft und Recht Berlin",
     },
     {
       title: "Aplicaciones web con JavaScript",
-      time: "MAYO de 2022",
+      time: "Травень 2022",
       where: "BINARY STUDIO",
     },
-    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+    { title: "Продвинутий SQL", time: "Квітень 2022", where: "ITVDN" },
   ],
   RUS: [
     {
-      title: "Licenciatura en Ingeniería de Sistemas de Computación y Robótica",
-      time: "Septiembre de 2021 - JULIO de 2025",
+      title: "Програмное обеспечение роботутехнических систем",
+      time: "Сентябрь 2021 - Июль 2025",
       where:
-        "Universidad Técnica Nacional de Ucrania 'Instituto Politécnico de Kiev'",
+        "Национальный технический университет Украины «Киевский политехнический институт имени Игоря Сикорского»",
     },
     {
-      title: "Administración y Dirección de Empresas",
-      time: "Abril de 2022 - Abril de 2023",
-      where: "Escuela de Economía y Derecho de Berlín",
+      title: "Бизнес-администрирование и управление",
+      time: "Апрель 2022 - Апрель2023",
+      where: "Hochschule fur Wirtschaft und Recht Berlin",
     },
     {
-      title: "Aplicaciones web con JavaScript",
-      time: "MAYO de 2022",
+      title: "Веб-разработка на JavaScript",
+      time: "Май 2022",
       where: "BINARY STUDIO",
     },
-    { title: "SQL Avanzado", time: "ABRIL de 2022", where: "ITVDN" },
+    { title: "Продвинутый SQL", time: "Апрель 2022", where: "ITVDN" },
   ],
 };
 
