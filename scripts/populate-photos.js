@@ -10,9 +10,13 @@ const Photos = {
       { src: "images/personal/1/P1100045.jpg", alt: "Personal Portrait 2" },
       { src: "images/personal/1/P1100092.jpg", alt: "Personal Travel 1" },
     ],
-    travel: [
-      { src: "images/personal/1/P1090749.jpg", alt: "Personal Travel 1" },
-      { src: "images/personal/1/P1100045.jpg", alt: "Personal Travel 2" }
+    doomer: [
+      { src: "images/personal/R/photo_2024-07-20_11-48-32.jpg", alt: "Doomer Photo 4" },
+      { src: "images/personal/R/photo_2024-07-20_11-48-35.jpg", alt: "Doomer Photo 5" },
+      { src: "images/personal/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },
+      { src: "images/personal/R/photo_2024-07-20_11-48-37.jpg", alt: "Doomer Photo 6" },
+      { src: "images/personal/R/photo_2024-07-20_11-48-40.jpg", alt: "Doomer Photo 8" },
+      { src: "images/personal/R/photo_2024-07-20_11-48-38.jpg", alt: "Doomer Photo 7" },
     ]
   },
   nature: {
@@ -69,7 +73,7 @@ function populatePhotos(category) {
     container.appendChild(subcatTitle);
 
     const grid = document.createElement('div');
-    grid.className = 'photo-grid-collage'; // Choose the layout class you want
+    grid.className = 'photo-grid-collage';
 
     photos.forEach(photo => {
       const html = createPhotoHtml(photo);
