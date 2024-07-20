@@ -1,39 +1,47 @@
-body {
-  font-family: "Open Sans Condensed";
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: 200;
   background-color: #ffffff;
   color: #131313;
 }
+
 .titan-one-regular {
   font-family: "Titan One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
 a {
   cursor: pointer;
 }
-footer{
-  margin: 0 20px 0px 20px;
+
+footer {
+  margin: 20px 40px 20px 20px;
 }
+
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   margin: 0 20px 0px 20px;
   top: 0;
   width: 100%;
   background-color: #ffffff;
+  z-index: 10;
 }
+
 .layout-grid {
   margin: 60px 50px 0 50px;
   display: grid;
   grid-template-columns: 400px auto;
   gap: 40px;
 }
-
+.languages{
+  width: 230px;
+}
 .languages a.selected {
   color: #bb4430;
 }
@@ -42,11 +50,55 @@ footer{
   color: #bb4430;
 }
 
-.main-content{
-  margin: 100px 20px 0px 20px
+.main-content {
+  margin: 100px 20px 0px 20px;
 }
 
+#about-container {
+  min-height: 700px;
+}
 
-#about-container{
-  height: 700px;
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 20px;
+  background-image: url('images/personal/R/photo_2024-07-20_11-48-30.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  overflow: hidden;
+  height: min-content
+}
+
+.card img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  z-index: 3;
 }

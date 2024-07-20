@@ -1,10 +1,7 @@
 //language settings
 const languages = [
   { name: "English", code: "ENG", class: "lang-eng" },
-  { name: "Spanish", code: "ESP", class: "lang-esp" },
-  { name: "German", code: "DE", class: "lang-de" },
-  { name: "Ukrainian", code: "UKR", class: "lang-ukr" },
-  { name: "Russian", code: "RUS", class: "lang-ru" },
+  { name: "Ukrainian", code: "UKR", class: "lang-ukr" }
 ];
 
 function setLanguage(language) {
