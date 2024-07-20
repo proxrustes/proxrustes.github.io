@@ -8,11 +8,15 @@ body {
 a {
   cursor: pointer;
 }
+footer{
+  margin: 0 20px 0px 20px;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  margin: 0 20px 0px 20px;
   top: 0;
   width: 100%;
   background-color: #ffffff;

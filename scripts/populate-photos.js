@@ -37,7 +37,13 @@ const Photos = {
     weddings: [
       { src: "images/lovestory/KO/P1110471.jpg", alt: "Love Story Wedding 2" },
       { src: "images/lovestory/KO/P1110450.jpg", alt: "Love Story Wedding 1" },
-      { src: "images/lovestory/KO/P1110473.jpg", alt: "Love Story Wedding 2" }
+      { src: "images/lovestory/KO/P1110473.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1110650.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1110653.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1110651.jpg", alt: "Love Story Wedding 1" },
+      { src: "images/lovestory/KO/P1110376.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1110814.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1110195.jpg", alt: "Love Story Wedding 1" },
     ]
   }
 };
@@ -50,6 +56,9 @@ function createPhotoHtml(photoItem) {
 }
 
 function populatePhotos(category) {
+  if (category == "about") {
+    return
+  }
   const container = document.getElementById(`${category}-container`);
   container.innerHTML = "";
 
@@ -78,6 +87,7 @@ document.querySelectorAll('.menu li').forEach(item => {
       container.style.display = 'none';
     });
     document.getElementById(target).style.display = 'block';
+
     populatePhotos(target.split('-')[0]);
   });
 });

@@ -11,9 +11,13 @@ function initTabs() {
 
       hideAllContainers(containers);
       showTargetContainer(this.getAttribute("data-target"));
-      sidebar.style.display = "none";
     });
   });
+  const defaultTab = document.getElementById("about-tab");
+  if (defaultTab) {
+    defaultTab.classList.add("selected");
+    showTargetContainer(defaultTab.getAttribute("data-target"));
+  }
 }
 
 function hideAllContainers(containers) {
@@ -24,7 +28,9 @@ function hideAllContainers(containers) {
 
 function showTargetContainer(targetId) {
   const targetContainer = document.getElementById(targetId);
-  targetContainer.style.display = "block";
+  if (targetContainer) {
+    targetContainer.style.display = "block";
+  }
 }
 
 // loading
