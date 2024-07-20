@@ -7,11 +7,10 @@ function initTabs() {
     tab.addEventListener("click", function (event) {
       event.preventDefault();
       tabs.forEach((t) => t.classList.remove("selected"));
-
       this.classList.add("selected");
-
       hideAllContainers(containers);
       showTargetContainer(this.getAttribute("data-target"));
+      initModal()
     });
   });
 
@@ -19,10 +18,8 @@ function initTabs() {
     card.addEventListener("click", function (event) {
       event.preventDefault();
       const targetId = this.getAttribute("data-target");
-
       tabs.forEach((t) => t.classList.remove("selected"));
       document.querySelector(`.menu li[data-target="${targetId}"]`).classList.add("selected");
-
       hideAllContainers(containers);
       showTargetContainer(targetId);
     });
@@ -48,7 +45,6 @@ function showTargetContainer(targetId) {
   }
 }
 
-// loading
 document.addEventListener("DOMContentLoaded", function () {
   initTabs();
 });

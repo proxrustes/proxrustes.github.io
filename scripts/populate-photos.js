@@ -1,24 +1,23 @@
 const Photos = {
   portrait: {
     female: [
-      { src: "images/conceptual/1/P1100222.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/1/nps-7.jpg", alt: "Personal Portrait 2" },
       { src: "images/portrait/P1120035.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/P1090360.jpg", alt: "Personal Portrait 1" },
+      { src: "images/conceptual/1/nps-1.jpg", alt: "Personal Portrait 1" },
     ],
     male: [
-      { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },],
+      { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },
+      { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },],
 
   },
   conceptual: {
     "Natur Park Südgelände": [
-      { src: "images/conceptual/1/P1090743.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/P1090360.jpg", alt: "Personal Portrait 1" },
-      { src: "images/conceptual/1/P1090749.jpg", alt: "Personal Travel 1" },
-      { src: "images/conceptual/1/P1100222.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/P1100290.jpg", alt: "Personal Travel 1" },
-      { src: "images/conceptual/1/P1100213.jpg", alt: "Personal Travel 2" },
-      { src: "images/conceptual/1/P1100045.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/P1100092.jpg", alt: "Personal Travel 1" },
+      { src: "images/conceptual/1/nps-2.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/1/nps-1.jpg", alt: "Personal Portrait 1" },
+      { src: "images/conceptual/1/nps-3.jpg", alt: "Personal Travel 1" },
+      { src: "images/conceptual/1/nps-7.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/1/nps-4.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/1/P1090462.jpg", alt: "Personal Travel 2" },
     ],
     doomer: [
       { src: "images/conceptual/R/photo_2024-07-20_11-48-32.jpg", alt: "Doomer Photo 4" },
@@ -29,8 +28,8 @@ const Photos = {
       { src: "images/conceptual/R/photo_2024-07-20_11-48-38.jpg", alt: "Doomer Photo 7" },
     ],
     marshes: [
-      { src: "images/conceptual/marshes/P1130524.JPG", alt: "Marsh Landscape 1" },
-      { src: "images/conceptual/marshes/P1130615.JPG", alt: "Marsh Landscape 3" },
+      { src: "images/conceptual/marshes/marshes-1.JPG", alt: "Marsh Landscape 1" },
+      { src: "images/conceptual/marshes/marshes-2.JPG", alt: "Marsh Landscape 3" },
     ]
   },
   locations: {
@@ -45,37 +44,41 @@ const Photos = {
   },
   lovestory: {
     "03.05.2024": [
-      { src: "images/lovestory/1/P1080965.jpg", alt: "Love Story Engagement 1" },
+      { src: "images/lovestory/1/sd-1.jpg", alt: "Love Story Engagement 1" },
       { src: "images/lovestory/1/P1090209.jpg", alt: "Love Story Wedding 1" },
       { src: "images/lovestory/1/P1090673.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/1/P1090152.jpg", alt: "Love Story Engagement 2" },
-      { src: "images/lovestory/1/P1090792.jpg", alt: "Love Story Wedding 2" },
       { src: "images/lovestory/1/P1090757.jpg", alt: "Love Story Wedding 1" },
+      { src: "images/lovestory/1/P1090792.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/1/P1090465.jpg", alt: "Love Story Wedding 2" },
     ],
     "15.07.2024": [
-      { src: "images/lovestory/KO/P1110471.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110450.jpg", alt: "Love Story Wedding 1" },
-      { src: "images/lovestory/KO/P1110473.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110650.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110653.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110651.jpg", alt: "Love Story Wedding 1" },
-      { src: "images/lovestory/KO/P1110376.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110814.jpg", alt: "Love Story Wedding 2" },
-      { src: "images/lovestory/KO/P1110195.jpg", alt: "Love Story Wedding 1" },
+      { src: "images/lovestory/KO/P1110589.jpg", alt: "Love Story Wedding 14" },
+      { src: "images/lovestory/KO/P1110814.jpg", alt: "Love Story Wedding 18" },
+      { src: "images/lovestory/KO/P1110195.jpg", alt: "Love Story Wedding 9" },
+      { src: "images/lovestory/KO/P1110650.jpg", alt: "Love Story Wedding 15" },
+      { src: "images/lovestory/KO/P1110651.jpg", alt: "Love Story Wedding 16" },
+      { src: "images/lovestory/KO/P1110653.jpg", alt: "Love Story Wedding 17" },
+      { src: "images/lovestory/KO/P1110026.jpg", alt: "Love Story Wedding 7" },
+      { src: "images/lovestory/KO/P1100683.jpg", alt: "Love Story Wedding 1" },
+      { src: "images/lovestory/KO/P1110137.jpg", alt: "Love Story Wedding 8" },
+      { src: "images/lovestory/KO/P1100708.jpg", alt: "Love Story Wedding 2" },
+      { src: "images/lovestory/KO/P1100882.jpg", alt: "Love Story Wedding 6" },
+      { src: "images/lovestory/KO/P1110393.jpg", alt: "Love Story Wedding 12" },
+    
     ]
   }
 };
 function createPhotoHtml(photoItem) {
   return `
     <div class="photo-item">
-        <img src="${photoItem.src}" alt="${photoItem.alt} loading="lazy"">
+        <img src="${photoItem.src}" alt="${photoItem.alt}">
     </div>
   `;
 }
 
 function populatePhotos(category) {
   if (category == "about") {
-    return
+    return;
   }
   const container = document.getElementById(`${category}-container`);
   container.innerHTML = "";
@@ -119,6 +122,7 @@ document.querySelectorAll('.card').forEach(item => {
 
     populatePhotos(target.split('-')[0]);
   });
+ 
 });
 window.addEventListener("languageChanged", (event) => {
   populatePhotos(event.detail);
