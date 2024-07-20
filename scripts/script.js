@@ -11,6 +11,7 @@ function initTabs() {
 
       hideAllContainers(containers);
       showTargetContainer(this.getAttribute("data-target"));
+      sidebar.style.display = "none";
     });
   });
 }
