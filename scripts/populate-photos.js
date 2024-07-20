@@ -2,7 +2,9 @@ const Photos = {
   portrait: {
     female: [
       { src: "images/conceptual/1/P1100222.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/P1090360.jpg", alt: "Personal Portrait 1" },],
+      { src: "images/portrait/P1120035.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/1/P1090360.jpg", alt: "Personal Portrait 1" },
+    ],
     male: [
       { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },],
 
@@ -66,7 +68,7 @@ const Photos = {
 function createPhotoHtml(photoItem) {
   return `
     <div class="photo-item">
-        <img src="${photoItem.src}" alt="${photoItem.alt}">
+        <img src="${photoItem.src}" alt="${photoItem.alt} loading="lazy"">
     </div>
   `;
 }
