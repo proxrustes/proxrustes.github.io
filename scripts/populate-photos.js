@@ -20,13 +20,13 @@ const Photos = {
     ]
   },
   nature: {
-    landscapes: [
-      { src: "images/nature/1/P1090360.jpg", alt: "Nature Landscape 1" },
-      { src: "images/nature/1/P1090743.jpg", alt: "Nature Landscape 2" }
-    ],
-    wildlife: [
-      { src: "images/nature/1/P1090749.jpg", alt: "Nature Wildlife 1" },
-      { src: "images/nature/1/P1100045.jpg", alt: "Nature Wildlife 2" }
+    "Watrenberg Fields": [
+      { src: "images/nature/field/P1110397.JPG", alt: "Nature Landscape 4" },
+      { src: "images/nature/field/P1110861.JPG", alt: "Nature Landscape 5" },
+      { src: "images/nature/field/P1110394.JPG", alt: "Nature Landscape 2" },
+      { src: "images/nature/field/P1100943.JPG", alt: "Nature Landscape 1" },
+      { src: "images/nature/field/P1110396.JPG", alt: "Nature Landscape 3" },
+      { src: "images/nature/field/P1120007.JPG", alt: "Nature Landscape 6" },
     ]
   },
   lovestory: {
@@ -95,7 +95,17 @@ document.querySelectorAll('.menu li').forEach(item => {
     populatePhotos(target.split('-')[0]);
   });
 });
+document.querySelectorAll('.card').forEach(item => {
+  item.addEventListener('click', () => {
+    const target = item.getAttribute('data-target');
+    document.querySelectorAll('.content-container').forEach(container => {
+      container.style.display = 'none';
+    });
+    document.getElementById(target).style.display = 'block';
 
+    populatePhotos(target.split('-')[0]);
+  });
+});
 window.addEventListener("languageChanged", (event) => {
   populatePhotos(event.detail);
 });
