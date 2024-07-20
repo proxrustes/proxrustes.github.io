@@ -18,7 +18,8 @@ a {
 }
 
 footer {
-  margin: 20px 40px 20px 20px;
+  padding: 20px 40px 60px 20px;
+  text-align: center;
 }
 
 .header {

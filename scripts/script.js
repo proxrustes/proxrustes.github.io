@@ -1,6 +1,7 @@
 function initTabs() {
   const tabs = document.querySelectorAll(".menu li");
   const containers = document.querySelectorAll(".content-container");
+  const cards = document.querySelectorAll(".card");
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", function (event) {
@@ -13,6 +14,20 @@ function initTabs() {
       showTargetContainer(this.getAttribute("data-target"));
     });
   });
+
+  cards.forEach((card) => {
+    card.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("data-target");
+
+      tabs.forEach((t) => t.classList.remove("selected"));
+      document.querySelector(`.menu li[data-target="${targetId}"]`).classList.add("selected");
+
+      hideAllContainers(containers);
+      showTargetContainer(targetId);
+    });
+  });
+
   const defaultTab = document.getElementById("about-tab");
   if (defaultTab) {
     defaultTab.classList.add("selected");

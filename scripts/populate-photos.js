@@ -1,6 +1,6 @@
 const Photos = {
   personal: {
-    "Naturpark Sudegelande": [
+    "Natur Park Südgelände": [
       { src: "images/personal/1/P1090743.jpg", alt: "Personal Portrait 2" },
       { src: "images/personal/1/P1090360.jpg", alt: "Personal Portrait 1" },
       { src: "images/personal/1/P1090749.jpg", alt: "Personal Travel 1" },
@@ -19,8 +19,8 @@ const Photos = {
       { src: "images/personal/R/photo_2024-07-20_11-48-38.jpg", alt: "Doomer Photo 7" },
     ]
   },
-  nature: {
-    "Watrenberg Fields": [
+  locations: {
+    "Landschaftspark Wartenberger Feldmark": [
       { src: "images/nature/field/P1110397.JPG", alt: "Nature Landscape 4" },
       { src: "images/nature/field/P1110861.JPG", alt: "Nature Landscape 5" },
       { src: "images/nature/field/P1110394.JPG", alt: "Nature Landscape 2" },
@@ -30,7 +30,7 @@ const Photos = {
     ]
   },
   lovestory: {
-    "Naturpark Sudegelande": [
+    "03.05.2024": [
       { src: "images/lovestory/1/P1080965.jpg", alt: "Love Story Engagement 1" },
       { src: "images/lovestory/1/P1090209.jpg", alt: "Love Story Wedding 1" },
       { src: "images/lovestory/1/P1090673.jpg", alt: "Love Story Wedding 2" },
@@ -38,7 +38,7 @@ const Photos = {
       { src: "images/lovestory/1/P1090792.jpg", alt: "Love Story Wedding 2" },
       { src: "images/lovestory/1/P1090757.jpg", alt: "Love Story Wedding 1" },
     ],
-    weddings: [
+    "15.07.2024": [
       { src: "images/lovestory/KO/P1110471.jpg", alt: "Love Story Wedding 2" },
       { src: "images/lovestory/KO/P1110450.jpg", alt: "Love Story Wedding 1" },
       { src: "images/lovestory/KO/P1110473.jpg", alt: "Love Story Wedding 2" },
