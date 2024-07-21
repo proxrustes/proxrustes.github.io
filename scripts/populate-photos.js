@@ -28,8 +28,8 @@ const Photos = {
       { src: "images/conceptual/R/photo_2024-07-20_11-48-38.jpg", alt: "Doomer Photo 7" },
     ],
     marshes: [
-      { src: "images/conceptual/marshes/marshes-1.JPG", alt: "Marsh Landscape 1" },
-      { src: "images/conceptual/marshes/marshes-2.JPG", alt: "Marsh Landscape 3" },
+      { src: "images/conceptual/marshes/marshes-1.jpg", alt: "Marsh Landscape 1" },
+      { src: "images/conceptual/marshes/marshes-2.jpg", alt: "Marsh Landscape 3" },
     ]
   },
   locations: {
