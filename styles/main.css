@@ -61,7 +61,7 @@ footer {
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 20px;
   background-image: url('images/personal/R/photo_2024-07-20_11-48-30.jpg');
