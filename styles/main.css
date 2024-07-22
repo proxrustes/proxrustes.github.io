@@ -1,20 +1,21 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Ubuntu';
   font-weight: 200;
   background-color: #ffffff;
   color: #131313;
 }
 
-.titan-one-regular {
-  font-family: "Titan One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+h1{
+  font-weight: 800;
 }
 
 a {
+  color: inherit;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 footer {
@@ -43,7 +44,7 @@ footer {
 .languages{
   width: 230px;
 }
-.languages a.selected {
+a.selected {
   color: #bb4430;
 }
 
@@ -52,7 +53,7 @@ footer {
 }
 
 .main-content {
-  margin: 100px 20px 0px 20px;
+  margin: 100px 80px 0px 80px;
 }
 
 #about-container {
@@ -61,7 +62,7 @@ footer {
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 20px;
   background-image: url('images/personal/R/photo_2024-07-20_11-48-30.jpg');
@@ -82,7 +83,7 @@ footer {
 
 .card img {
   width: 100%;
-  height: 600px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }
@@ -102,4 +103,8 @@ footer {
   font-weight: bold;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
   z-index: 3;
+}
+
+.about-text{
+  width: 40vw
 }

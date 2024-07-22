@@ -6,61 +6,90 @@
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <link rel="stylesheet" type="text/css" href="styles/posts.css" />
   <link rel="stylesheet" type="text/css" href="styles/header.css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
   <meta charset=utf-8>
 </head>
 
 <body>
   <div class="header">
     <ul class="menu">
-      <li id="about-tab" data-target="about-container">BROWSE</li>
-      <li id="portrait-tab" data-target="portrait-container">PORTRAIT</li>
-      <li id="family-tab" data-target="family-container">FAMILY</li>
-      <li id="lovestory-tab" data-target="lovestory-container">LOVE STORY</li>
-      <li id="events-tab" data-target="events-container">EVENTS</li>
-      <li id="conceptual-tab" data-target="conceptual-container">CONCEPTUAL</li>
-      <li id="locations-tab" data-target="locations-container">LOCATIONS</li>
+      <li class="selected"><a href="index.html">ABOUT</a></li>
+      <li><a href="portrait.html">PORTRAIT</a></li>
+      <li><a href="family.html">FAMILY</a></li>
+      <li><a href="lovestory.html">LOVE STORY</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="conceptual.html">CONCEPTUAL</a></li>
+      <li><a href="locations.html" >LOCATIONS</a></li>
     </ul>
   </div>
   <div class="main-content">
     <div id="about-container" class="content-container container">
+      <div class="about-text">
+        <h1>NASTYA KUDRIAVTSEVA <span class="red-text">| Berlin</span></h1>
+        <p>This opens up a all kinds of freedom for UI design. Layering these together can produce amazing results. You can play around with a border editor here. Layering. That is an important word. You can layer or chain many box shadows together on a single div. The above example uses this to set the colors.</p>
+        <p>Usually, a designer will carefully position squares within other squares with consistent margins, paddings, and typography for optimal accessibility and understandability. Wisely, they further add layered shadows and perhaps a few images to help visually distinguish widget interaction and state.</p>
+      </div>
+      <center><h2 style="margin-top: 70px;">STUFF I SHOOT</h2></center>
       <div class="services-container">
-        <div id="portrait-card" class="card" data-target="portrait-container">
-          <img src="images/conceptual/R/photo_2024-07-20_11-48-30.jpg" alt="Card 1">
-          <div class="card-text">PORTRAIT</div>
+        <div id="portrait-card" class="card" href="portrait.html">
+          <a href="portrait.html">
+            <img src="images/conceptual/R/photo_2024-07-20_11-48-30.jpg" alt="Card 1">
+            <div class="card-text">PORTRAIT</div>
+          </a>
         </div>
         <div id="conceptual-card" class="card" data-target="conceptual-container">
-          <img src="images/conceptual/marshes/marshes-2.jpg" alt="Card 5">
-          <div class="card-text">CONCEPTUAL</div>
+          <a href="conceptual.html">
+
+            <img src="images/conceptual/marshes/marshes-2.jpg" alt="Card 5">
+            <div class="card-text">CONCEPTUAL</div>
+          </a>
         </div>
         <div id="lovestory-card" class="card" data-target="lovestory-container">
-          <img src="images/lovestory/KO/P1110650.jpg" alt="Card 2">
-          <div class="card-text">LOVE STORY</div>
+          <a href="lovestory.html">
+
+            <img src="images/lovestory/KO/P1110650.jpg" alt="Card 2">
+            <div class="card-text">LOVE STORY</div>
+          </a>
         </div>
         <div id="events-card" class="card" data-target="events-container">
-          <img src="image3.jpg" alt="Card 3">
-          <div class="card-text">EVENTS</div>
+          <a href="events.html">
+
+            <img src="image3.jpg" alt="Card 3">
+            <div class="card-text">EVENTS</div>
+          </a>
         </div>
         <div id="family-card" class="card" data-target="family-container">
-          <img src="image4.jpg" alt="Card 4">
-          <div class="card-text">FAMILY</div>
+          <a href="family.html">
+
+            <img src="image4.jpg" alt="Card 4">
+            <div class="card-text">FAMILY</div>
+          </a>
         </div>
         <div id="locations-card" class="card" data-target="locations-container">
-          <img src="images/nature/field/P1110394.JPG" alt="Card 6">
-          <div class="card-text">LOCATIONS</div>
+          <a href="locations.html">
+
+            <img src="images/nature/field/P1110394.JPG" alt="Card 6">
+            <div class="card-text">LOCATIONS</div>
+          </a>
         </div>
         
       </div>
+      <center><h2 style="margin-top: 70px; margin-bottom: 40px;">BROWSE</h2></center>
+      <div class="feed-container">
+        <div class="column">
+            <img src="images/conceptual/R/photo_2024-07-20_11-48-30.jpg" alt="Image 1">
+            <img src="images/conceptual/marshes/marshes-1.jpg" alt="Image 3">
+        </div>
+        <div class="column">
+          <img src="images/lovestory/KO/P1110650.jpg" alt="Image 6">
+            <img src="images/conceptual/R/photo_2024-07-20_11-48-37.jpg" alt="Image 5">
+        </div>
+        <div class="column">
+          <img src="images/conceptual/1/nps-3.jpg" alt="Image 4">
+          <img src="images/lovestory/KO/P1110650.jpg" alt="Image 9">
+        </div>
     </div>
-    <div id="portrait-container" class="content-container container" style="display: none"></div>
-    <div id="events-container" class="content-container container" style="display: none"></div>
-    <div id="lovestory-container" class="content-container container" style="display: none"></div>
-    <div id="locations-container" class="content-container container" style="display: none"></div>
-    <div id="family-container" class="content-container container" style="display: none"></div>
-    <div id="conceptual-container" class="content-container container" style="display: none"></div>
+    </div>
   </div>
   <footer>
     <h3>NASTYA KUDRIAVTSEVA</h4>

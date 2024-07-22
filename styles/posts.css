@@ -23,3 +23,26 @@
 
   cursor: pointer;
 }
+
+
+
+.feed-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 20px;
+}
+
+
+.feed-container  .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.feed-container .column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
