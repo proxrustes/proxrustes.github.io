@@ -100,30 +100,3 @@ function populatePhotos(category) {
     container.appendChild(grid);
   }
 }
-
-document.querySelectorAll('.menu li').forEach(item => {
-  item.addEventListener('click', () => {
-    const target = item.getAttribute('data-target');
-    document.querySelectorAll('.content-container').forEach(container => {
-      container.style.display = 'none';
-    });
-    document.getElementById(target).style.display = 'block';
-
-    populatePhotos(target.split('-')[0]);
-  });
-});
-document.querySelectorAll('.card').forEach(item => {
-  item.addEventListener('click', () => {
-    const target = item.getAttribute('data-target');
-    document.querySelectorAll('.content-container').forEach(container => {
-      container.style.display = 'none';
-    });
-    document.getElementById(target).style.display = 'block';
-
-    populatePhotos(target.split('-')[0]);
-  });
- 
-});
-window.addEventListener("languageChanged", (event) => {
-  populatePhotos(event.detail);
-});
