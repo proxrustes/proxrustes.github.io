@@ -34,3 +34,9 @@
 .intro .title {
   font-size: 40px;
 }
+
+@media (max-width: 768px) {
+  .menu li {
+    font-size: 12px;
+  }
+}
