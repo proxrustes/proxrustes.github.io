@@ -46,3 +46,9 @@
   height: auto;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .feed-container {
+    flex-direction: column;
+  }
+}
