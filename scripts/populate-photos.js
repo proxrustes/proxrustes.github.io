@@ -4,13 +4,20 @@ const Photos = {
       { src: "images/conceptual/1/nps-7.jpg", alt: "Personal Portrait 2" },
       { src: "images/portrait/P1120035.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/1/nps-1.jpg", alt: "Personal Portrait 1" },
+      { src: "images/conceptual/masha/P1130155.jpg", alt: "Personal Portrait 2" },
     ],
     male: [
       { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },
       { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },],
-
   },
   conceptual: {
+    playground: [
+      { src: "images/conceptual/masha/P1120970.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/masha/P1130155.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/masha/P1120943.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/masha/P1120981.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/masha/P1130429.jpg", alt: "Personal Portrait 2" },
+  ],
     "Natur Park Südgelände": [
       { src: "images/conceptual/1/nps-2.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/1/nps-1.jpg", alt: "Personal Portrait 1" },
@@ -76,10 +83,26 @@ function createPhotoHtml(photoItem) {
   `;
 }
 
+function createSubmenu(category) {
+  const submenu = document.getElementById('submenu');
+  submenu.innerHTML = '';
+
+  const subcategories = Photos[category] || {};
+  for (const subcat of Object.keys(subcategories)) {
+    const menuItem = document.createElement('li');
+    const anchor = document.createElement('a');
+    anchor.href = `#${subcat}`;
+    anchor.textContent = subcat.replace(/_/g, ' ').toUpperCase();
+    menuItem.appendChild(anchor);
+    submenu.appendChild(menuItem);
+  }
+}
+
 function populatePhotos(category) {
   if (category == "about") {
     return;
   }
+  createSubmenu(category)
   const container = document.getElementById(`${category}-container`);
   container.innerHTML = "";
 
@@ -87,6 +110,7 @@ function populatePhotos(category) {
   for (const [subcat, photos] of Object.entries(subcategories)) {
     const subcatTitle = document.createElement('h2');
     subcatTitle.textContent = subcat.replace(/_/g, ' ').toUpperCase();
+    subcatTitle.id = subcat;
     container.appendChild(subcatTitle);
 
     const grid = document.createElement('div');
