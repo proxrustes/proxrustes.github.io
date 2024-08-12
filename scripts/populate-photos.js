@@ -10,6 +10,25 @@ const Photos = {
       { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },
       { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },],
   },
+  events:{
+    "'Book of Sirens' play":[
+      { src: "images/events/1.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/bs-3.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/2.jpg", alt: "Doomer Photo 3" },
+
+    ],
+    "'ProEnglish Theatre' discussion":[
+      { src: "images/events/ped-1.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-3.jpg", alt: "Doomer Photo 3" },
+
+    ],
+    "'Kurs Valüt' concert":[
+      { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/kv-2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/kv-1.jpg", alt: "Doomer Photo 3" },
+    ]
+  },
   conceptual: {
     playground: [
       { src: "images/conceptual/masha/P1120970.jpg", alt: "Personal Portrait 2" },
