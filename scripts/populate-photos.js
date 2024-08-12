@@ -11,23 +11,37 @@ const Photos = {
       { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },],
   },
   events:{
+   
     "'Book of Sirens' play":[
       { src: "images/events/1.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/bs-3.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/2.jpg", alt: "Doomer Photo 3" },
 
     ],
-    "'ProEnglish Theatre' discussion":[
-      { src: "images/events/ped-1.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/ped-2.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/ped-3.jpg", alt: "Doomer Photo 3" },
-
+    "CI-CD conference":[
+      { src: "images/events/CICDconference/5.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/4.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/1.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/7.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/3.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/6.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/8.jpg", alt: "Doomer Photo 3" },
     ],
     "'Kurs Valüt' concert":[
       { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/kv-2.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/kv-1.jpg", alt: "Doomer Photo 3" },
-    ]
+    ],
+    "'ProEnglish Theatre' discussion":[
+      { src: "images/events/ped-1.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-3.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-4.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/ped-5.jpg", alt: "Doomer Photo 3" },
+
+    ],
+   
   },
   conceptual: {
     playground: [
