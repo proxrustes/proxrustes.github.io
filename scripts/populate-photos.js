@@ -1,34 +1,17 @@
 const Photos = {
-  portrait: {
-    female: [
-      { src: "images/conceptual/1/nps-7.jpg", alt: "Personal Portrait 2" },
-      { src: "images/portrait/P1120035.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/1/nps-1.jpg", alt: "Personal Portrait 1" },
-      { src: "images/conceptual/masha/P1130155.jpg", alt: "Personal Portrait 2" },
-    ],
-    male: [
-      { src: "images/conceptual/R/photo_2024-07-20_11-48-30.jpg", alt: "Doomer Photo 3" },
-      { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },
-      { src: "images/portrait/andrew.jpg", alt: "Doomer Photo 3" },
-    ],
+  family:{
+    "":[
+      { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
+      { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
+      { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
+    ]
   },
   events: {
-
     "'Book of Sirens' play": [
       { src: "images/events/1.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/bs-3.jpg", alt: "Doomer Photo 3" },
       { src: "images/events/2.jpg", alt: "Doomer Photo 3" },
 
-    ],
-    "CI-CD conference": [
-      { src: "images/events/CICDconference/5.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/2.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/4.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/1.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/7.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/3.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/6.jpg", alt: "Doomer Photo 3" },
-      { src: "images/events/CICDconference/8.jpg", alt: "Doomer Photo 3" },
     ],
     "'Kurs Valüt' concert": [
       { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },
@@ -43,20 +26,30 @@ const Photos = {
       { src: "images/events/ped-5.jpg", alt: "Doomer Photo 3" },
 
     ],
+    "CI-CD conference": [
+      { src: "images/events/CICDconference/5.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/2.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/4.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/1.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/7.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/3.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/6.jpg", alt: "Doomer Photo 3" },
+      { src: "images/events/CICDconference/8.jpg", alt: "Doomer Photo 3" },
+    ],
 
   },
   conceptual: {
-    playground1: [
+    playground: [
+      { src: "images/conceptual/playground/7.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/playground/5.jpg", alt: "Personal Portrait 2" },
+      { src: "images/conceptual/playground/6.jpg", alt: "Personal Portrait 2" },
+    ],
+    "~": [
       { src: "images/conceptual/masha/P1120970.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1130155.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1120943.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1120981.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1130429.jpg", alt: "Personal Portrait 2" },
-    ],
-    playground: [
-      { src: "images/conceptual/playground/7.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/playground/5.jpg", alt: "Personal Portrait 2" },
-      { src: "images/conceptual/playground/6.jpg", alt: "Personal Portrait 2" },
     ],
     "Natur Park Südgelände": [
       { src: "images/conceptual/1/nps-2.jpg", alt: "Personal Portrait 2" },
