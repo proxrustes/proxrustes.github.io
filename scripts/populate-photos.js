@@ -39,7 +39,7 @@ const Photos = {
 
   },
   conceptual: {
-    playground: [
+    "green flat white": [
       { src: "images/conceptual/playground/7.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/playground/5.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/playground/6.jpg", alt: "Personal Portrait 2" },
