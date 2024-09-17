@@ -39,12 +39,21 @@ const Photos = {
 
   },
   conceptual: {
+    "u-bahn chronicles": [
+      { src: "images/conceptual/liza akimova/P1150014.jpg", alt: "Personal Portrait" },
+      { src: "images/conceptual/liza akimova/P1140625.jpg", alt: "Personal Portrait" },
+      { src: "images/conceptual/liza akimova/P1150005.jpg", alt: "Personal Portrait" },
+      { src: "images/conceptual/liza akimova/P1140599.jpg", alt: "Personal Portrait" },
+      { src: "images/conceptual/liza akimova/P1140642.jpg", alt: "Personal Portrait" },
+      { src: "images/conceptual/liza akimova/P1140533.jpg", alt: "Personal Portrait" },
+      
+    ],
     "green flat white": [
       { src: "images/conceptual/playground/7.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/playground/5.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/playground/6.jpg", alt: "Personal Portrait 2" },
     ],
-    "~": [
+    "playground": [
       { src: "images/conceptual/masha/P1120970.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1130155.jpg", alt: "Personal Portrait 2" },
       { src: "images/conceptual/masha/P1120943.jpg", alt: "Personal Portrait 2" },
