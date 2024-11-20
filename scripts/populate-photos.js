@@ -40,12 +40,12 @@ const Photos = {
   },
   conceptual: {
     "pool table":  [
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-04.jpg", "alt": "Billiard Image 10" },
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-03 (2).jpg", "alt": "Billiard Image 9" },
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-07.jpg", "alt": "Billiard Image 13" },
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-05.jpg", "alt": "Billiard Image 11" },
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-07 (2).jpg", "alt": "Billiard Image 13" },
-      { "src": "images/conceptual/billiard/photo_2024-11-20_13-26-01 (2).jpg", "alt": "Billiard Image 5" },
+      { "src": "images/conceptual/billiard/hands-2.jpg", "alt": "Billiard Image 10" },
+      { "src": "images/conceptual/billiard/rk-portrait.jpg", "alt": "Billiard Image 9" },
+      { "src": "images/conceptual/billiard/hands-1.jpg", "alt": "Billiard Image 13" },
+      { "src": "images/conceptual/billiard/v-portrait-1.jpg", "alt": "Billiard Image 11" },
+      { "src": "images/conceptual/billiard/v-pool.jpg", "alt": "Billiard Image 13" },
+      { "src": "images/conceptual/billiard/v-portrait.jpg", "alt": "Billiard Image 5" },
     ],
     "u-bahn chronicles": [
       { src: "images/conceptual/liza akimova/P1150014.jpg", alt: "Personal Portrait" },
