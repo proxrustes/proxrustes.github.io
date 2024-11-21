@@ -90,6 +90,16 @@ const Photos = {
     ]
   },
   locations: {
+    "Oberbaumbrücke": [
+      { src: "images/city/bridge-1.jpg", alt: "city" },
+      { src: "images/city/arc-1.jpg", alt: "city" },
+      { src: "images/city/girls.jpg", alt: "city" },
+      { src: "images/city/arc-2.jpg", alt: "city" },
+      { src: "images/city/bikeguy.jpg", alt: "city" },
+      { src: "images/city/granma.jpg", alt: "city" },
+
+
+    ],
     "Landschaftspark Wartenberger Feldmark": [
       { src: "images/nature/field/P1110397.JPG", alt: "Nature Landscape 4" },
       { src: "images/nature/field/P1110861.JPG", alt: "Nature Landscape 5" },
