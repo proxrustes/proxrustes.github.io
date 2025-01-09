@@ -1,10 +1,10 @@
 const Photos = {
   ideas: {
-    "'Book of Sirens' play": {
+    "Doomer 90s": {
       photos: [
-        { src: "images/events/1.jpg", alt: "Doomer Photo 3" },
-        { src: "images/events/bs-3.jpg", alt: "Doomer Photo 3" },
-        { src: "images/events/2.jpg", alt: "Doomer Photo 3" },
+        { src: "https://i.pinimg.com/736x/44/5b/46/445b46f2e92edd3ed0817caed758c767.jpg", alt: "Doomer Photo 3" },
+        { src: "https://i.pinimg.com/736x/86/54/0a/86540ae9587b86d48b87b6011e69e35a.jpg", alt: "Doomer Photo 3" },
+        { src: "https://i.pinimg.com/736x/99/d8/d0/99d8d08cb06d3a28fb95534fba123be1.jpg", alt: "Doomer Photo 3" },
       ],
       description: "A fascinating play exploring themes of mythology and identity.",
       pinterestLink: "https://www.pinterest.com/book_of_sirens",
