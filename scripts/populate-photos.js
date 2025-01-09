@@ -1,6 +1,35 @@
 const Photos = {
-  family:{
-    "":[
+  ideas: {
+    "'Book of Sirens' play": {
+      photos: [
+        { src: "images/events/1.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/bs-3.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/2.jpg", alt: "Doomer Photo 3" },
+      ],
+      description: "A fascinating play exploring themes of mythology and identity.",
+      pinterestLink: "https://www.pinterest.com/book_of_sirens",
+    },
+    "'Kurs Valüt' concert": {
+      photos: [
+        { src: "images/portrait/2.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/kv-2.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/kv-1.jpg", alt: "Doomer Photo 3" },
+      ],
+      description: "An energetic concert by the post-punk band Kurs Valüt.",
+      pinterestLink: "https://www.pinterest.com/kurs_valut",
+    },
+    "'ProEnglish Theatre' discussion": {
+      photos: [
+        { src: "images/events/ped-1.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/ped-2.jpg", alt: "Doomer Photo 3" },
+        { src: "images/events/ped-3.jpg", alt: "Doomer Photo 3" },
+      ],
+      description: "Engaging discussions by ProEnglish Theatre about modern storytelling.",
+      pinterestLink: "https://www.pinterest.com/proenglish_theatre",
+    },
+  },
+  family: {
+    "": [
       { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
       { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
       { src: "images/COMING SOON.png", alt: "Doomer Photo 3" },
@@ -39,7 +68,7 @@ const Photos = {
 
   },
   conceptual: {
-    "pool table":  [
+    "pool table": [
       { "src": "images/conceptual/billiard/hands-2.jpg", "alt": "Billiard Image 10" },
       { "src": "images/conceptual/billiard/rk-portrait.jpg", "alt": "Billiard Image 9" },
       { "src": "images/conceptual/billiard/hands-1.jpg", "alt": "Billiard Image 13" },
@@ -54,7 +83,7 @@ const Photos = {
       { src: "images/conceptual/liza akimova/P1140599.jpg", alt: "Personal Portrait" },
       { src: "images/conceptual/liza akimova/P1140642.jpg", alt: "Personal Portrait" },
       { src: "images/conceptual/liza akimova/P1140533.jpg", alt: "Personal Portrait" },
-      
+
     ],
     "green flat white": [
       { src: "images/conceptual/playground/7.jpg", alt: "Personal Portrait 2" },
@@ -183,4 +212,81 @@ function populatePhotos(category) {
 
     container.appendChild(grid);
   }
+}
+
+function renderIdeasSection() {
+  const container = document.getElementById("ideas-container");
+  if (!container) {
+      console.error("Container not found");
+      return;
+  }
+
+  container.innerHTML = ""; // Очистка контейнера
+
+  if (!Photos.ideas || Object.keys(Photos.ideas).length === 0) {
+      console.error("No ideas data available");
+      container.innerHTML = "<p>No ideas found.</p>";
+      return;
+  }
+
+  for (const [title, idea] of Object.entries(Photos.ideas)) {
+      console.log(`Rendering idea: ${title}`);
+      
+      // Создаем общую контейнерную обертку
+      const sectionContainer = document.createElement("div");
+      sectionContainer.className = "container";
+
+      // Левая часть с фотографиями
+      const leftDiv = document.createElement("div");
+      leftDiv.className = "left";
+
+      const bigPhoto = document.createElement("img");
+      bigPhoto.className = "big-photo";
+      bigPhoto.src = idea.photos[0]?.src || "https://via.placeholder.com/600x300";
+      bigPhoto.alt = idea.photos[0]?.alt || "Big Photo";
+      leftDiv.appendChild(bigPhoto);
+
+      // Маленькие фото оборачиваем в отдельный div
+      const smallPhotosWrapper = document.createElement("div");
+      smallPhotosWrapper.className = "small-photos-wrapper";
+
+      for (let i = 1; i < idea.photos.length; i++) {
+          const smallPhoto = document.createElement("img");
+          smallPhoto.className = "small-photo";
+          smallPhoto.src = idea.photos[i]?.src || "https://via.placeholder.com/600x100";
+          smallPhoto.alt = idea.photos[i]?.alt || `Small Photo ${i}`;
+          smallPhotosWrapper.appendChild(smallPhoto);
+
+          // Рендерим максимум 2 маленьких фото
+          if (i === 2) break;
+      }
+
+      leftDiv.appendChild(smallPhotosWrapper);
+      sectionContainer.appendChild(leftDiv);
+
+      // Правая часть с текстом
+      const rightDiv = document.createElement("div");
+      rightDiv.className = "right";
+
+      const titleElement = document.createElement("h1");
+      titleElement.textContent = title;
+      rightDiv.appendChild(titleElement);
+
+      const description = document.createElement("p");
+      description.textContent = idea.description || "No description provided."; rightDiv.appendChild(description);
+
+      const pinterestLink = document.createElement("a");
+      pinterestLink.href = idea.pinterestLink || "#";
+      pinterestLink.textContent = "View on Pinterest";
+      pinterestLink.target = "_blank";
+      pinterestLink.style.display = "block";
+      pinterestLink.style.marginTop = "10px";
+      rightDiv.appendChild(pinterestLink);
+  
+      sectionContainer.appendChild(rightDiv);
+  
+      // Добавляем всё в главный контейнер
+      container.appendChild(sectionContainer);
+  }
+  
 }

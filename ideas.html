@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Nastya Ku, photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/ideas.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/posts.css" />
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <meta charset=utf-8>
+</head>
+
+<body>
+    <div class="header">
+        <ul class="menu">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="family.html">FAMILY</a></li>
+            <li><a href="lovestory.html">LOVE STORY</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="conceptual.html">CONCEPTUAL</a></li>
+            <li><a href="locations.html">LOCATIONS</a></li>
+            <li class="selected"><a href="ideas.html">IDEAS</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div id="ideas-container"></div>
+    </div>
+    <footer>
+        <h3>NASTYA KUDRIAVTSEVA</h3>
+        <p>instagram: @dee_teppich</p>
+    </footer>
+</body>
+<script src="scripts/populate-photos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM fully loaded and parsed");
+        renderIdeasSection();
+    });
+</script>
+
+</html>
