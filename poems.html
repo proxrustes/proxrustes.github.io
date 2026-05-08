@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Nastya Ku, Poems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+  <meta charset=utf-8>
+  <style>
+    .poems-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .poem-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .poem-card pre {
+      font-family: 'Ubuntu', sans-serif;
+      white-space: pre-wrap;
+      margin-bottom: 15px;
+    }
+    .poem-meta {
+      font-style: italic;
+      color: #666;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .instruction {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <ul class="menu">
+      <li><a href="index.html">ABOUT</a></li>
+      <li><a href="family.html">FAMILY</a></li>
+      <li><a href="lovestory.html">LOVE STORY</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="conceptual.html">CONCEPTUAL</a></li>
+      <li><a href="locations.html">LOCATIONS</a></li>
+      <li><a href="ideas.html">IDEAS</a></li>
+      <li class="selected"><a href="poems.html">POEMS</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="poems-container">
+      <div class="form-group" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="renderPoems()" style="flex: 1; min-width: 200px;">
+        <select id="categoryFilter" onchange="renderPoems()" style="padding: 8px; font-family: 'Ubuntu', sans-serif;">
+          <option value="">All Categories</option>
+        </select>
+        <select id="langFilter" onchange="renderPoems()" style="padding: 8px; font-family: 'Ubuntu', sans-serif;">
+          <option value="">All Languages</option>
+        </select>
+      </div>
+      <div id="poemsList"></div>
+    </div>
+  </div>
+  
+  <footer>
+    <h3>NASTYA KUDRIAVTSEVA</h3>
+    <p>instagram: @dee_teppich</p>
+  </footer>
+
+  <script src="poems-data.js"></script>
+  <script>
+    const poemsList = document.getElementById('poemsList');
+    let allPoems = [];
+
+    function loadPoems() {
+      if (typeof poemsMarkdown !== 'undefined') {
+        parsePoems(poemsMarkdown);
+        populateFilters();
+        renderPoems();
+      } else {
+        poemsList.innerHTML = '<p>Could not load poems data.</p>';
+      }
+    }
+
+    function parsePoems(markdown) {
+      allPoems = [];
+      const blocks = markdown.split('---').map(b => b.trim()).filter(b => b);
+
+      blocks.forEach(block => {
+        const lines = block.split('\n');
+        let title = 'Untitled';
+        let author = 'Unknown';
+        let category = '';
+        let lang = '';
+        let textLines = [];
+
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (line.toLowerCase().startsWith('title:')) {
+            title = line.substring(6).trim();
+          } else if (line.toLowerCase().startsWith('author:')) {
+            author = line.substring(7).trim();
+          } else if (line.toLowerCase().startsWith('category:')) {
+            category = line.substring(9).trim();
+          } else if (line.toLowerCase().startsWith('lang:')) {
+            lang = line.substring(5).trim();
+          } else {
+            textLines.push(lines[i]);
+          }
+        }
+
+        let text = textLines.join('\n').trim();
+
+        allPoems.push({
+          title,
+          author,
+          category,
+          lang,
+          text
+        });
+      });
+    }
+
+    function populateFilters() {
+      const categoryFilter = document.getElementById('categoryFilter');
+      const langFilter = document.getElementById('langFilter');
+      
+      const categories = [...new Set(allPoems.map(p => p.category).filter(c => c))].sort();
+      const langs = [...new Set(allPoems.map(p => p.lang).filter(l => l))].sort();
+      
+      categories.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        categoryFilter.appendChild(opt);
+      });
+      
+      langs.forEach(l => {
+        const opt = document.createElement('option');
+        opt.value = l;
+        opt.textContent = l;
+        langFilter.appendChild(opt);
+      });
+    }
+
+    function renderPoems() {
+      poemsList.innerHTML = '';
+      
+      if (allPoems.length === 0) {
+        poemsList.innerHTML = '<p>No poems found.</p>';
+        return;
+      }
+
+      const searchQuery = (document.getElementById('searchInput').value || '').toLowerCase();
+      const selCategory = document.getElementById('categoryFilter').value;
+      const selLang = document.getElementById('langFilter').value;
+
+      const filteredPoems = allPoems.filter(poem => {
+        let match = true;
+        if (selCategory && poem.category !== selCategory) match = false;
+        if (selLang && poem.lang !== selLang) match = false;
+        
+        if (searchQuery) {
+          const tMatch = poem.text.toLowerCase().includes(searchQuery);
+          const aMatch = poem.author.toLowerCase().includes(searchQuery);
+          const tiMatch = poem.title.toLowerCase().includes(searchQuery);
+          if (!tMatch && !aMatch && !tiMatch) match = false;
+        }
+        
+        return match;
+      });
+
+      if (filteredPoems.length === 0) {
+        poemsList.innerHTML = '<p>No matching poems found.</p>';
+        return;
+      }
+
+      filteredPoems.forEach(poem => {
+        const card = document.createElement('details');
+        card.className = 'poem-card';
+        card.style.cursor = 'pointer';
+        
+        let summaryText = `${escapeHtml(poem.title)} — ${escapeHtml(poem.author)}`;
+        
+        let metaText = poem.author;
+        if (poem.category) metaText += ` (${poem.category})`;
+
+        card.innerHTML = `
+          <summary style="font-weight: bold; font-size: 1.1em;">${summaryText}</summary>
+          <div style="margin-top: 15px;">
+            <pre>${escapeHtml(poem.text)}</pre>
+            <div class="poem-meta">— ${escapeHtml(metaText)}</div>
+          </div>
+        `;
+        poemsList.appendChild(card);
+      });
+    }
+
+    function escapeHtml(unsafe) {
+      const div = document.createElement('div');
+      div.textContent = unsafe;
+      return div.innerHTML;
+    }
+
+    // Initial load
+    loadPoems();
+  </script>
+</body>
+</html>
