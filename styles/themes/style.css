@@ -325,6 +325,42 @@ h2 {
 }
 
 
+/* Photos and Poems */
+.feed-container img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    margin-bottom: 1rem;
+}
+.feed-container img:hover {
+    transform: scale(1.02);
+}
+
+.poem-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.poem-card summary {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.poem-meta {
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+}
+.form-group input, .form-group select {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
 /* Theme Switcher */
 #theme-switcher-wrapper {
     position: fixed;

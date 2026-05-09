@@ -299,6 +299,54 @@ h2 {
     }
 }
 
+/* Photos and Poems */
+.feed-container img {
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    transition: transform 0.1s, box-shadow 0.1s;
+    margin-bottom: 1rem;
+}
+.feed-container img:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.poem-card {
+    background: #fff;
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0;
+}
+.poem-card summary {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    background: var(--highlight-bg);
+    display: inline-block;
+    padding: 0.5rem;
+    border: 3px solid var(--border-color);
+}
+.poem-meta {
+    font-weight: 700;
+    margin-top: 1rem;
+    background: var(--accent-color);
+    color: #fff;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--border-color);
+}
+.form-group input, .form-group select {
+    background: #fff;
+    border: 3px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    font-weight: 700;
+    box-shadow: 4px 4px 0px var(--border-color);
+    border-radius: 0;
+}
+
 /* Theme Switcher */
 #theme-switcher-wrapper {
     position: fixed;

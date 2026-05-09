@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!themeToggle) {
         const wrapper = document.createElement('div');
         wrapper.id = 'theme-switcher-wrapper';
-        wrapper.style.position = 'fixed';
-        wrapper.style.bottom = '20px';
-        wrapper.style.right = '20px';
-        wrapper.style.zIndex = '9999';
 
         themeToggle = document.createElement('button');
         themeToggle.id = 'theme-toggle';
@@ -16,21 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.style.background = 'white';
         themeToggle.style.border = '1px solid #ccc';
         themeToggle.style.borderRadius = '50%';
-        themeToggle.style.width = '50px';
-        themeToggle.style.height = '50px';
-        themeToggle.style.fontSize = '1.5rem';
+        themeToggle.style.width = '40px';
+        themeToggle.style.height = '40px';
+        themeToggle.style.fontSize = '1.2rem';
         themeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
         
         wrapper.appendChild(themeToggle);
-        document.body.appendChild(wrapper);
+        
+        const container = document.getElementById('theme-toggle-container');
+        if (container) {
+            container.appendChild(wrapper);
+        } else {
+            wrapper.style.position = 'fixed';
+            wrapper.style.bottom = '20px';
+            wrapper.style.right = '20px';
+            wrapper.style.zIndex = '9999';
+            document.body.appendChild(wrapper);
+        }
     }
 
     const themes = [
+        { file: 'styles/themes/style.css', icon: '✨' },
         { file: 'styles/themes/old-internet.css', icon: '💾' },
         { file: 'styles/themes/neobrutalism.css', icon: '🏗️' },
     ];
     
-    let currentThemeIndex = 7; // Default to clean theme
+    let currentThemeIndex = 0; // Default to clean theme
     const savedThemeIndex = localStorage.getItem('themeIndex');
     if (savedThemeIndex !== null) {
         currentThemeIndex = parseInt(savedThemeIndex, 10);
