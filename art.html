@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Nastya Ku, Poems & Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+  <meta charset=utf-8>
+  <style>
+    .global-menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      list-style: none;
+    }
+    .global-menu a {
+      text-decoration: none;
+      font-weight: bold;
+      color: inherit;
+    }
+    .global-menu a:hover {
+      text-decoration: underline;
+    }
+    .art-container {
+      max-width: 800px;
+      margin: 150px auto 0 auto;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .art-link {
+      display: block;
+      padding: 40px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 2em;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .art-link:hover {
+      background: #eee;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <ul class="menu global-menu">
+      <li><a href="index.html">RESUME</a></li>
+      <li><a href="photography.html">PHOTOGRAPHY</a></li>
+      <li><a href="art.html" style="color: #bb4430;">POEMS & ART</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="art-container">
+      <a href="poems.html" class="art-link">📖 Read Favorite Poems</a>
+      <a href="paintings.html" class="art-link">🎨 View Favorite Paintings</a>
+    </div>
+  </div>
+  
+  <footer>
+    <h3>NASTYA KUDRIAVTSEVA</h3>
+    <p>instagram: @dee_teppich</p>
+  </footer>
+
+  <script src="scripts/theme-switcher.js"></script>
+</body>
+</html>

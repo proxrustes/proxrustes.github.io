@@ -1,68 +1,76 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Nastya Ku, photography</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
-  <link rel="stylesheet" type="text/css" href="styles/posts.css" />
-  <link rel="stylesheet" type="text/css" href="styles/header.css" />
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-  <meta charset=utf-8>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/themes/style.css" />
+    <style>
+      .global-menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+      }
+      .global-menu a {
+        text-decoration: none;
+        font-weight: bold;
+        color: inherit;
+      }
+      .global-menu a:hover {
+        text-decoration: underline;
+      }
+    </style>
 </head>
-
 <body>
-  <div class="header">
-    <ul class="menu">
-      <li class="selected"><a href="index.html">ABOUT</a></li>
-      <li><a href="family.html">FAMILY</a></li>
-      <li><a href="lovestory.html">LOVE STORY</a></li>
-      <li><a href="events.html">EVENTS</a></li>
-      <li><a href="conceptual.html">CONCEPTUAL</a></li>
-      <li><a href="locations.html">LOCATIONS</a></li>
-      <li><a href="ideas.html">IDEAS</a></li>
-      <li><a href="poems.html">POEMS</a></li>
+  <div class="header" style="position: relative; margin-bottom: 20px;">
+    <ul class="menu global-menu">
+      <li><a href="index.html" style="color: #bb4430;">RESUME</a></li>
+      <li><a href="photography.html">PHOTOGRAPHY</a></li>
+      <li><a href="art.html">POEMS & ART</a></li>
     </ul>
   </div>
-  <div class="main-content">
-    <div id="about-container" class="content-container container">
-      <div class="about-text">
-        <h1>NASTYA KUDRIAVTSEVA <span class="red-text">| Berlin</span></h1>
-      </div>
-      <center><h2 style="margin-top: 90px;">You might be interested. Text me</h2></center>
-      <div class="services-container">
-        <div id="conceptual-card" class="card" data-target="conceptual-container">
-          <a href="ideas.html">
-            <img src="https://i.pinimg.com/736x/44/5b/46/445b46f2e92edd3ed0817caed758c767.jpg"  alt="Card 5">
-            <div class="card-text">Doomer 90s</div>
-          </a>
-        </div>
-       
-      </div>
-      <center><h2 style="margin: 90px 0 90px 0;"># # #</h2></center>
-      <div class="feed-container">
-        <div class="column">
-          <img src="images/conceptual/masha/P1120970.jpg" alt="Image 6">
-          <img src="images/conceptual/playground/6.jpg" alt="Image 3">
-        </div>
-        <div class="column">
-          <img src="images/conceptual/playground/7.jpg" alt="Image 3">
-          <img src="images/conceptual/billiard/rk-portrait.jpg" alt="Image 3">
-          <img src="images/conceptual/playground/5.jpg" alt="Image 3">
-        </div>
-        <div class="column">
-          <img src="images/conceptual/R/photo_2024-07-20_11-48-30.jpg" alt="Image 1">
-          <img src="images/city/bikeguy.jpg" alt="Image 1">
-          <img src="images/conceptual/1/nps-3.jpg" alt="Image 4">
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <h3>NASTYA KUDRIAVTSEVA</h3>
-    <p>instagram: @dee_teppich</p>
-  </footer>
-</body>
-<script src="scripts/populate-photos.js"></script>
+    
+    <div class="container">
+        <header>
+            <h1>Anastasiia Kudriavtseva</h1>
+            <p>Software Engineer</p>
+        </header>
 
+        <section class="skills-section">
+            <h2>Relevant Skills</h2>
+            <div class="skills-container" id="skills-container">
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <div class="left-column">
+                <section class="timeline-section">
+                    <h2>Experience & Education</h2>
+                    <div class="timeline" id="timeline">
+                    </div>
+                </section>
+            </div>
+            
+            <div class="right-column">
+                <section class="showcase-section upcoming-section">
+                    <h2>Upcoming Events</h2>
+                    <div id="upcoming-container">
+                    </div>
+                </section>
+
+                <section class="showcase-section">
+                    <h2>Past Projects & Events</h2>
+                    <div id="showcase-container">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/resume.js"></script>
+    <script src="scripts/theme-switcher.js"></script>
+</body>
 </html>

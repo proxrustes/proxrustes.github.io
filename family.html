@@ -12,16 +12,20 @@
 </head>
 
 <body>
-  <div class="header">
-    <ul class="menu">
-      <li><a href="index.html">ABOUT</a></li>
+  <div class="header" style="flex-direction: column;">
+    <ul class="menu global-menu" style="margin-bottom: 10px;">
+      <li><a href="index.html">RESUME</a></li>
+      <li><a href="photography.html" style="color: #bb4430;">PHOTOGRAPHY</a></li>
+      <li><a href="art.html">POEMS & ART</a></li>
+    </ul>
+    <ul class="menu" style="font-size: 0.8em;">
+      <li><a href="photography.html">ABOUT</a></li>
       <li class="selected"><a href="family.html">FAMILY</a></li>
       <li><a href="lovestory.html">LOVE STORY</a></li>
       <li><a href="events.html">EVENTS</a></li>
       <li><a href="conceptual.html">CONCEPTUAL</a></li>
       <li><a href="locations.html">LOCATIONS</a></li>
       <li><a href="ideas.html">IDEAS</a></li>
-      <li><a href="poems.html">POEMS</a></li>
     </ul>
   </div>
   <div id="subheader" class="subheader">
@@ -40,6 +44,7 @@
       populatePhotos('family');
     });
   </script>
+<script src="scripts/theme-switcher.js"></script>
 </body>
 
 </html>

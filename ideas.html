@@ -13,17 +13,22 @@
 </head>
 
 <body>
-    <div class="header">
-        <ul class="menu">
-            <li><a href="index.html">ABOUT</a></li>
-            <li><a href="family.html">FAMILY</a></li>
-            <li><a href="lovestory.html">LOVE STORY</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="conceptual.html">CONCEPTUAL</a></li>
-            <li><a href="locations.html">LOCATIONS</a></li>
-            <li class="selected"><a href="ideas.html">IDEAS</a></li>
-        </ul>
-    </div>
+    <div class="header" style="flex-direction: column;">
+    <ul class="menu global-menu" style="margin-bottom: 10px;">
+      <li><a href="index.html">RESUME</a></li>
+      <li><a href="photography.html" style="color: #bb4430;">PHOTOGRAPHY</a></li>
+      <li><a href="art.html">POEMS & ART</a></li>
+    </ul>
+    <ul class="menu" style="font-size: 0.8em;">
+      <li><a href="photography.html">ABOUT</a></li>
+      <li><a href="family.html">FAMILY</a></li>
+      <li><a href="lovestory.html">LOVE STORY</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="conceptual.html">CONCEPTUAL</a></li>
+      <li><a href="locations.html">LOCATIONS</a></li>
+      <li class="selected"><a href="ideas.html">IDEAS</a></li>
+    </ul>
+  </div>
     <div class="main-content">
         <div id="ideas-container"></div>
     </div>
@@ -31,6 +36,7 @@
         <h3>NASTYA KUDRIAVTSEVA</h3>
         <p>instagram: @dee_teppich</p>
     </footer>
+<script src="scripts/theme-switcher.js"></script>
 </body>
 <script src="scripts/populate-photos.js"></script>
 <script>

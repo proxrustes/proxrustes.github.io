@@ -49,15 +49,10 @@
 
 <body>
   <div class="header">
-    <ul class="menu">
-      <li><a href="index.html">ABOUT</a></li>
-      <li><a href="family.html">FAMILY</a></li>
-      <li><a href="lovestory.html">LOVE STORY</a></li>
-      <li><a href="events.html">EVENTS</a></li>
-      <li><a href="conceptual.html">CONCEPTUAL</a></li>
-      <li><a href="locations.html">LOCATIONS</a></li>
-      <li><a href="ideas.html">IDEAS</a></li>
-      <li class="selected"><a href="poems.html">POEMS</a></li>
+    <ul class="menu global-menu">
+      <li><a href="index.html">RESUME</a></li>
+      <li><a href="photography.html">PHOTOGRAPHY</a></li>
+      <li><a href="art.html" style="color: #bb4430;">POEMS & ART</a></li>
     </ul>
   </div>
   <div class="main-content">
@@ -188,24 +183,45 @@
         return;
       }
 
+      // Group by author
+      const poemsByAuthor = {};
       filteredPoems.forEach(poem => {
-        const card = document.createElement('details');
-        card.className = 'poem-card';
-        card.style.cursor = 'pointer';
-        
-        let summaryText = `${escapeHtml(poem.title)} — ${escapeHtml(poem.author)}`;
-        
-        let metaText = poem.author;
-        if (poem.category) metaText += ` (${poem.category})`;
+        if (!poemsByAuthor[poem.author]) {
+          poemsByAuthor[poem.author] = [];
+        }
+        poemsByAuthor[poem.author].push(poem);
+      });
 
-        card.innerHTML = `
-          <summary style="font-weight: bold; font-size: 1.1em;">${summaryText}</summary>
-          <div style="margin-top: 15px;">
-            <pre>${escapeHtml(poem.text)}</pre>
-            <div class="poem-meta">— ${escapeHtml(metaText)}</div>
-          </div>
-        `;
-        poemsList.appendChild(card);
+      // Sort authors alphabetically
+      const authors = Object.keys(poemsByAuthor).sort();
+
+      authors.forEach(author => {
+        const authorHeader = document.createElement('h3');
+        authorHeader.style.marginTop = '30px';
+        authorHeader.style.borderBottom = '1px solid #ccc';
+        authorHeader.style.paddingBottom = '5px';
+        authorHeader.textContent = author;
+        poemsList.appendChild(authorHeader);
+
+        poemsByAuthor[author].forEach(poem => {
+          const card = document.createElement('details');
+          card.className = 'poem-card';
+          card.style.cursor = 'pointer';
+          
+          let summaryText = escapeHtml(poem.title);
+          
+          let metaText = poem.author;
+          if (poem.category) metaText += ` (${poem.category})`;
+
+          card.innerHTML = `
+            <summary style="font-weight: bold; font-size: 1.1em;">${summaryText}</summary>
+            <div style="margin-top: 15px;">
+              <pre>${escapeHtml(poem.text)}</pre>
+              <div class="poem-meta">— ${escapeHtml(metaText)}</div>
+            </div>
+          `;
+          poemsList.appendChild(card);
+        });
       });
     }
 
@@ -218,5 +234,6 @@
     // Initial load
     loadPoems();
   </script>
+<script src="scripts/theme-switcher.js"></script>
 </body>
 </html>
