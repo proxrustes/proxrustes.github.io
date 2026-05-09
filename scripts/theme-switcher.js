@@ -28,22 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const themes = [
         { file: 'styles/themes/old-internet.css', icon: '💾' },
         { file: 'styles/themes/neobrutalism.css', icon: '🏗️' },
-        { file: 'styles/themes/claymorphism.css', icon: '🏺' },
-        { file: 'styles/themes/kitsch.css', icon: '🦩' },
-        { file: 'styles/themes/retro-cybercore.css', icon: '👾' },
-        { file: 'styles/themes/kawaii.css', icon: '🌸' },
-        { file: 'styles/themes/utilitarian.css', icon: '⚙️' },
-        { file: 'styles/main.css', icon: '⚪' } // Default clean theme
     ];
     
-    // Load theme from localStorage
     let currentThemeIndex = 7; // Default to clean theme
     const savedThemeIndex = localStorage.getItem('themeIndex');
     if (savedThemeIndex !== null) {
         currentThemeIndex = parseInt(savedThemeIndex, 10);
     }
     
-    // Add dynamic stylesheet link if missing
     let themeLink = document.getElementById('dynamic-theme');
     if (!themeLink) {
         themeLink = document.createElement('link');
