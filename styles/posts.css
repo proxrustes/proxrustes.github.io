@@ -24,7 +24,11 @@
   cursor: pointer;
 }
 
-
+footer{
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
 
 .feed-container {
   display: flex;

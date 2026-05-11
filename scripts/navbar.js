@@ -4,16 +4,14 @@ class SiteNavbar extends HTMLElement {
         
         const isResume = path === 'index.html' || path === '';
         const isArt = ['art.html', 'poems.html', 'paintings.html'].includes(path);
-        const isPhotography = !isResume && !isArt; // family.html, events.html, etc.
+        const isPhotography = !isResume && !isArt; 
 
         const subMenuItems = [
-            { href: 'photography.html', text: 'ABOUT' },
             { href: 'family.html', text: 'FAMILY' },
             { href: 'lovestory.html', text: 'LOVE STORY' },
             { href: 'events.html', text: 'EVENTS' },
             { href: 'conceptual.html', text: 'CONCEPTUAL' },
-            { href: 'locations.html', text: 'LOCATIONS' },
-            { href: 'ideas.html', text: 'IDEAS' }
+            { href: 'locations.html', text: 'LOCATIONS' }
         ];
 
         let submenuHTML = '';
@@ -56,7 +54,7 @@ class SiteNavbar extends HTMLElement {
             <div class="header site-navbar" style="flex-direction: column; position: relative; margin-bottom: 20px; width: 100%; display: flex; align-items: center;">
                 <ul class="menu global-menu" style="display: flex; justify-content: center; gap: 20px; padding: 0; list-style: none;">
                     <li><a href="index.html" style="${isResume ? 'color: #bb4430; font-weight: bold;' : 'font-weight: bold; text-decoration: none;'}">RESUME</a></li>
-                    <li><a href="photography.html" style="${isPhotography ? 'color: #bb4430; font-weight: bold;' : 'font-weight: bold; text-decoration: none;'}">PHOTOGRAPHY</a></li>
+                    <li><a href="conceptual.html" style="${isPhotography ? 'color: #bb4430; font-weight: bold;' : 'font-weight: bold; text-decoration: none;'}">PHOTOGRAPHY</a></li>
                     <li><a href="art.html" style="${isArt ? 'color: #bb4430; font-weight: bold;' : 'font-weight: bold; text-decoration: none;'}">POEMS & ART</a></li>
                 </ul>
                 ${submenuHTML}
