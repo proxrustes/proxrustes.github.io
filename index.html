@@ -3,52 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles/header.css" />
-    <link rel="stylesheet" type="text/css" href="styles/themes/old-internet.css" />
-    <script src="scripts/navbar.js"></script>
+    <title>Nastya K.</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: sans-serif; overflow-x: hidden; }
+
+        .layout-section {
+            min-height: 100vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 5px dashed #000;
+        }
+
+    
+
+        /* 1: Desktop OS */
+        #layout-1 { background: #008080; font-family: 'Pixel', Courier, monospace; }
+        .desktop-icons { display: flex; gap: 40px; }
+        .icon { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: white; width: 100px; }
+        .icon-img { width: 60px; height: 60px; background: #c0c0c0; border: 2px solid #fff; border-bottom-color: #808080; border-right-color: #808080; display: flex; align-items: center; justify-content: center; font-size: 30px; margin-bottom: 5px; }
+        .icon:hover .icon-img { background: #000080; color: white; }
+
+    </style>
 </head>
 <body>
-  <site-navbar></site-navbar>
-    
-    <div class="container">
-        <header>
-            <h1>Anastasiia Kudriavtseva</h1>
-            <p>Software Engineer</p>
-        </header>
 
-        <section class="skills-section">
-            <h2>Relevant Skills</h2>
-            <div class="skills-container" id="skills-container">
-            </div>
-        </section>
-
-        <div class="main-grid">
-            <div class="left-column">
-                <section class="timeline-section">
-                    <h2>Experience & Education</h2>
-                    <div class="timeline" id="timeline">
-                    </div>
-                </section>
-            </div>
-            
-            <div class="right-column">
-                <section class="showcase-section upcoming-section">
-                    <h2>Upcoming Events</h2>
-                    <div id="upcoming-container">
-                    </div>
-                </section>
-
-                <section class="showcase-section">
-                    <h2>Past Projects & Events</h2>
-                    <div id="showcase-container">
-                    </div>
-                </section>
-            </div>
+    <!-- 1 to 5 from before -->
+    <section id="layout-1" class="layout-section">
+        <div class="desktop-icons">
+            <a href="resume/index.html" class="icon"><div class="icon-img">📁</div><span>Resume</span></a>
+            <a href="photography/events.html" class="icon"><div class="icon-img">📸</div><span>Photos</span></a>
+            <a href="art/paintings.html" class="icon"><div class="icon-img">🎨</div><span>Art</span></a>
         </div>
-    </div>
+    </section>
+  
 
-    <script src="scripts/resume.js"></script>
-    <script src="scripts/theme-switcher.js"></script>
 </body>
 </html>
