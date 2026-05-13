@@ -16,16 +16,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Frontend Developer',
                 period: 'February 2025 - Present',
                 institution: 'Ströer GmbH',
-                description: 'Spearheaded the development of a complex e-commerce platform using React, Next.js, and TypeScript, resulting in a 40% increase in user engagement. Implemented state management using Redux and Apollo Client. Optimized web performance by 30% through code-splitting and lazy loading. Mentored 5 junior developers.',
-                skills: ['react',  'ts', 'htmlcss', 'uiux']
+                description: [
+                    'Own an internal editorial React application end-to-end within a monorepo (primary ownership of one product; occasional support of a second frontend).',
+                    'Drive the full UI lifecycle: user stories, primary/secondary research, lo/hi-fi prototypes in Figma, and usability studies; translate outcomes into production-ready React/TypeScript code.',
+                    'Build and maintain a reusable component foundation (MUI, Tailwind, custom components) and enforce consistency via lint rules and CI quality checks.',
+                    'Implement REST API integrations with pagination, caching, loading/error states, and resilient data-fetching patterns.',
+                    'Debug production issues using Sentry, Datadog, and logs; collaborate with backend teams using Node.js to isolate root causes and unblock releases.',
+                    'Contribute through code reviews, pair programming, and mentoring a junior engineer.'
+                ],
+                skills: ['react', 'ts', 'htmlcss', 'uiux'],
+                projects: [
+                    { icon: '📝', title: 'Editorial Dashboard', description: 'Core product for content creation' }
+                ]
             },
             {
                 type: 'work',
                 title: 'Software Engineer',
                 period: 'September 2025 - Present',
                 institution: 'Cerepal.ai',
-                description: 'Developed and maintained responsive web applications using Vue.js. Collaborated with UX/UI designers to implement pixel-perfect interfaces. Reduced bug count by 25% through rigorous unit testing using Jest.',
+                description: [
+                    'Developed and maintained responsive web applications using Vue.js.',
+                    'Collaborated with UX/UI designers to implement pixel-perfect interfaces.',
+                    'Reduced bug count by 25% through rigorous unit testing using Jest.'
+                ],
                 skills: ['cv', 'cad', 'python', "next", "uiux"],
+                projects: [
+                    { icon: '🧠', title: 'AI Automation Tool', description: 'Computer vision platform integration' }
+                ]
             },
             {
                 type: 'education',
@@ -34,16 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Software Engineering',
                 institution: 'Kyiv Polytechnic National University',
                 period: '2021 - 2025',
-                description: 'Foundational studies in software engineering, algorithms, and data structures.',
-                skills: ['python', 'ts', "cv", "cad", "uiux"], 
+                description: ['Foundational studies in software engineering, algorithms, and data structures.'],
+                skills: ['python', 'ts', "cv", "cad", "uiux"]
             },
             {
                 type: 'work',
                 title: 'Frontend Developer',
                 period: 'December 2022 - January 2024',
                 institution: 'Catenion GmbH',
-                description: 'Developed and maintained responsive web applications using Vue.js. Collaborated with UX/UI designers to implement pixel-perfect interfaces. Reduced bug count by 25% through rigorous unit testing using Jest.',
-                skills: ['next', "react",  "uiux", "testing"]
+                description: [
+                    'Developed and maintained responsive web applications using Vue.js.',
+                    'Collaborated with UX/UI designers to implement pixel-perfect interfaces.',
+                    'Reduced bug count by 25% through rigorous unit testing using Jest.'
+                ],
+                skills: ['next', "react",  "uiux", "testing"],
+                projects: [
+                    { icon: '📊', title: 'Analytics Dashboard', description: 'Data visualization interface' }
+                ]
             }
         ],
         projects: [
@@ -151,9 +175,54 @@ document.addEventListener('DOMContentLoaded', () => {
             date.textContent = entry.period;
             content.appendChild(date);
 
-            const p = document.createElement('p');
-            p.textContent = entry.description;
-            content.appendChild(p);
+            if (Array.isArray(entry.description)) {
+                const ul = document.createElement('ul');
+                ul.className = 'timeline-description-list';
+                entry.description.forEach(point => {
+                    const li = document.createElement('li');
+                    li.textContent = point;
+                    ul.appendChild(li);
+                });
+                content.appendChild(ul);
+            } else {
+                const p = document.createElement('p');
+                p.textContent = entry.description;
+                content.appendChild(p);
+            }
+
+            if (entry.projects && entry.projects.length > 0) {
+                const projectsContainer = document.createElement('div');
+                projectsContainer.className = 'timeline-projects';
+                
+                entry.projects.forEach(project => {
+                    const projectBlock = document.createElement('div');
+                    projectBlock.className = 'timeline-project-block';
+                    
+                    const projectHeader = document.createElement('div');
+                    projectHeader.className = 'project-header';
+                    
+                    const icon = document.createElement('span');
+                    icon.className = 'project-icon';
+                    icon.textContent = project.icon;
+                    
+                    const title = document.createElement('span');
+                    title.className = 'project-title';
+                    title.textContent = project.title;
+                    
+                    projectHeader.appendChild(icon);
+                    projectHeader.appendChild(title);
+                    
+                    const desc = document.createElement('div');
+                    desc.className = 'project-desc';
+                    desc.textContent = project.description;
+                    
+                    projectBlock.appendChild(projectHeader);
+                    projectBlock.appendChild(desc);
+                    projectsContainer.appendChild(projectBlock);
+                });
+                
+                content.appendChild(projectsContainer);
+            }
 
             if (entry.skills && entry.skills.length > 0) {
                 const skillsDiv = document.createElement('div');
@@ -466,46 +535,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Theme Switcher
-    const themeToggle = document.getElementById('theme-toggle');
-    const themes = [
-        { file: 'old-internet.css', icon: '💾' },
-        { file: 'neobrutalism.css', icon: '🏗️' },
-        { file: 'claymorphism.css', icon: '🏺' },
-        { file: 'kitsch.css', icon: '🦩' },
-        { file: 'retro-cybercore.css', icon: '👾' },
-        { file: 'kawaii.css', icon: '🌸' },
-        { file: 'utilitarian.css', icon: '⚙️' },
-    ];
-    
-    // Load theme from localStorage
-    let currentThemeIndex = 0;
-    const savedThemeIndex = localStorage.getItem('themeIndex');
-    if (savedThemeIndex !== null) {
-        currentThemeIndex = parseInt(savedThemeIndex, 10);
-    }
-    
-    // Apply initial theme
-    const applyTheme = (index) => {
-        const theme = themes[index];
-        const stylesheet = document.querySelector('link[rel="stylesheet"]');
-        if (stylesheet) {
-            stylesheet.href = theme.file;
-        }
-        if (themeToggle) {
-            themeToggle.textContent = theme.icon;
-        }
-    };
-    
-    applyTheme(currentThemeIndex);
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            localStorage.setItem('themeIndex', currentThemeIndex);
-            applyTheme(currentThemeIndex);
-        });
-    }
 
     // Event Listeners for highlighting
     const skillTags = document.querySelectorAll('.skill-tag');

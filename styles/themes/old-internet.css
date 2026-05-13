@@ -335,3 +335,44 @@ h2 {
     font-family: inherit;
     border-radius: 2px;
 }
+
+/* Timeline Description List */
+.timeline-description-list {
+    margin: 0.5rem 0 1rem 1.2rem;
+    padding: 0;
+    list-style-type: disc;
+}
+.timeline-description-list li {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+/* Timeline Projects */
+.timeline-projects {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.timeline-project-block {
+    background: rgba(0, 0, 0, 0.03);
+    border-left: 3px solid #000080;
+    padding: 0.75rem;
+}
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+.project-icon {
+    font-size: 1.1rem;
+}
+.project-title {
+    color: #000080;
+}
+.project-desc {
+    font-size: 0.9rem;
+    color: #333;
+}

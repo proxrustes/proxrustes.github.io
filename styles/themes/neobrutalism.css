@@ -370,3 +370,45 @@ h2 {
     font-family: inherit;
     border-radius: 2px;
 }
+
+/* Timeline Description List */
+.timeline-description-list {
+    margin: 0.5rem 0 1rem 1.2rem;
+    padding: 0;
+    list-style-type: square;
+}
+.timeline-description-list li {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+/* Timeline Projects */
+.timeline-projects {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.timeline-project-block {
+    background: #fff;
+    border: 3px solid var(--text-color);
+    box-shadow: 3px 3px 0 var(--text-color);
+    padding: 0.75rem;
+}
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 800;
+}
+.project-icon {
+    font-size: 1.1rem;
+}
+.project-title {
+    color: var(--primary-color);
+}
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
