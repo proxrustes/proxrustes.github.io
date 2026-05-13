@@ -48,11 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'education',
                 eduType: 'Bachelor\'s Degree',
                 icon: '🎓',
-                title: 'Software Engineering',
-                institution: 'Kyiv Polytechnic National University',
+                title: 'Computer Systems Engineering',
+                institution: 'NTU of Ukraine "Kyiv Polytechnic Institute"',
                 period: '2021 - 2025',
                 description: ['Foundational studies in software engineering, algorithms, and data structures.'],
-                skills: ['python', 'ts', "cv", "cad", "uiux"]
+                skills: ['python', 'ts', "cv", "cad", "uiux"],
+                 projects: [
+                    { icon: '🌿', title: 'Robotic Hydroponic Cultivation System Based on IoT', description: 'Data visualization interface' },
+                    { icon: '📊', title: 'Hydroponics', description: 'Data visualization interface' },
+                    { icon: '📊', title: 'Hydroponics', description: 'Data visualization interface' },
+                ]
             },
             {
                 type: 'work',
