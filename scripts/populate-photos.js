@@ -1,33 +1,4 @@
 const Photos = {
-  ideas: {
-    "Doomer 90s": {
-      photos: [
-        { src: "https://i.pinimg.com/736x/44/5b/46/445b46f2e92edd3ed0817caed758c767.jpg", alt: "Doomer Photo 3" },
-        { src: "https://i.pinimg.com/736x/86/54/0a/86540ae9587b86d48b87b6011e69e35a.jpg", alt: "Doomer Photo 3" },
-        { src: "https://i.pinimg.com/736x/99/d8/d0/99d8d08cb06d3a28fb95534fba123be1.jpg", alt: "Doomer Photo 3" },
-      ],
-      description: "A fascinating play exploring themes of mythology and identity.",
-      pinterestLink: "https://www.pinterest.com/book_of_sirens",
-    },
-    "'Kurs Valüt' concert": {
-      photos: [
-        { src: "../images/portrait/2.jpg", alt: "Doomer Photo 3" },
-        { src: "../images/events/kv-2.jpg", alt: "Doomer Photo 3" },
-        { src: "../images/events/kv-1.jpg", alt: "Doomer Photo 3" },
-      ],
-      description: "An energetic concert by the post-punk band Kurs Valüt.",
-      pinterestLink: "https://www.pinterest.com/kurs_valut",
-    },
-    "'ProEnglish Theatre' discussion": {
-      photos: [
-        { src: "../images/events/ped-1.jpg", alt: "Doomer Photo 3" },
-        { src: "../images/events/ped-2.jpg", alt: "Doomer Photo 3" },
-        { src: "../images/events/ped-3.jpg", alt: "Doomer Photo 3" },
-      ],
-      description: "Engaging discussions by ProEnglish Theatre about modern storytelling.",
-      pinterestLink: "https://www.pinterest.com/proenglish_theatre",
-    },
-  },
   family: {
     "": [
       { src: "../images/COMING SOON.png", alt: "Doomer Photo 3" },
@@ -164,149 +135,22 @@ const Photos = {
     ]
   }
 };
-function createPhotoHtml(photoItem) {
-  return `
-    <div class="photo-item">
-        <img src="${photoItem.src}" alt="${photoItem.alt}">
-    </div>
-  `;
-}
-
-function createSubmenu(category) {
-  const submenu = document.getElementById('submenu');
-  submenu.innerHTML = '';
-
-  const subcategories = Photos[category] || {};
-  for (const subcat of Object.keys(subcategories)) {
-    const menuItem = document.createElement('li');
-    const anchor = document.createElement('a');
-    anchor.href = `#${subcat}`;
-    anchor.textContent = subcat.replace(/_/g, ' ').toUpperCase();
-    menuItem.appendChild(anchor);
-    submenu.appendChild(menuItem);
-  }
-}
-
-function populatePhotos(category) {
-  if (category == "about") {
-    return;
-  }
-  createSubmenu(category)
-  const container = document.getElementById(`${category}-container`);
-  container.innerHTML = "";
-
-  const subcategories = Photos[category] || {};
-  for (const [subcat, photos] of Object.entries(subcategories)) {
-    const subcatTitle = document.createElement('h2');
-    subcatTitle.textContent = subcat.replace(/_/g, ' ').toUpperCase();
-    subcatTitle.id = subcat;
-    container.appendChild(subcatTitle);
-
-    const grid = document.createElement('div');
-    grid.className = 'photo-grid-collage';
-
-    photos.forEach(photo => {
-      const html = createPhotoHtml(photo);
-      grid.insertAdjacentHTML("beforeend", html);
-    });
-
-    container.appendChild(grid);
-  }
-}
-
 function populateMasonry(containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = "";
 
   const seen = new Set();
   for (const category of ['conceptual', 'lovestory', 'events', 'locations', 'family']) {
-    for (const [subcat, photos] of Object.entries(Photos[category] || {})) {
+    for (const photos of Object.values(Photos[category] || {})) {
       photos.forEach(photo => {
         if (seen.has(photo.src) || photo.src.includes('COMING SOON')) return;
         seen.add(photo.src);
         container.insertAdjacentHTML("beforeend", `
-          <a class="masonry-item" href="${category}.html#${encodeURIComponent(subcat)}">
+          <div class="masonry-item">
             <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
-          </a>
+          </div>
         `);
       });
     }
   }
-}
-
-function renderIdeasSection() {
-  const container = document.getElementById("ideas-container");
-  if (!container) {
-      console.error("Container not found");
-      return;
-  }
-
-  container.innerHTML = ""; // Очистка контейнера
-
-  if (!Photos.ideas || Object.keys(Photos.ideas).length === 0) {
-      console.error("No ideas data available");
-      container.innerHTML = "<p>No ideas found.</p>";
-      return;
-  }
-
-  for (const [title, idea] of Object.entries(Photos.ideas)) {
-      console.log(`Rendering idea: ${title}`);
-      
-      // Создаем общую контейнерную обертку
-      const sectionContainer = document.createElement("div");
-      sectionContainer.className = "container";
-
-      // Левая часть с фотографиями
-      const leftDiv = document.createElement("div");
-      leftDiv.className = "left";
-
-      const bigPhoto = document.createElement("img");
-      bigPhoto.className = "big-photo";
-      bigPhoto.src = idea.photos[0]?.src || "https://via.placeholder.com/600x300";
-      bigPhoto.alt = idea.photos[0]?.alt || "Big Photo";
-      leftDiv.appendChild(bigPhoto);
-
-      // Маленькие фото оборачиваем в отдельный div
-      const smallPhotosWrapper = document.createElement("div");
-      smallPhotosWrapper.className = "small-photos-wrapper";
-
-      for (let i = 1; i < idea.photos.length; i++) {
-          const smallPhoto = document.createElement("img");
-          smallPhoto.className = "small-photo";
-          smallPhoto.src = idea.photos[i]?.src || "https://via.placeholder.com/600x100";
-          smallPhoto.alt = idea.photos[i]?.alt || `Small Photo ${i}`;
-          smallPhotosWrapper.appendChild(smallPhoto);
-
-          // Рендерим максимум 2 маленьких фото
-          if (i === 2) break;
-      }
-
-      leftDiv.appendChild(smallPhotosWrapper);
-      sectionContainer.appendChild(leftDiv);
-
-      // Правая часть с текстом
-      const rightDiv = document.createElement("div");
-      rightDiv.className = "right";
-
-      const titleElement = document.createElement("h1");
-      titleElement.textContent = title;
-      rightDiv.appendChild(titleElement);
-
-      const description = document.createElement("p");
-      description.textContent = idea.description || "No description provided."; rightDiv.appendChild(description);
-
-      const pinterestLink = document.createElement("a");
-      pinterestLink.href = idea.pinterestLink || "#";
-      pinterestLink.textContent = "View on Pinterest";
-      pinterestLink.target = "_blank";
-      pinterestLink.style.display = "block";
-      pinterestLink.style.marginTop = "10px";
-      rightDiv.appendChild(pinterestLink);
-  
-      sectionContainer.appendChild(rightDiv);
-  
-      // Добавляем всё в главный контейнер
-      container.appendChild(sectionContainer);
-  }
-  
 }
