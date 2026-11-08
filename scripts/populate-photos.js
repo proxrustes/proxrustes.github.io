@@ -214,6 +214,26 @@ function populatePhotos(category) {
   }
 }
 
+function populateMasonry(containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+
+  const seen = new Set();
+  for (const category of ['conceptual', 'lovestory', 'events', 'locations', 'family']) {
+    for (const [subcat, photos] of Object.entries(Photos[category] || {})) {
+      photos.forEach(photo => {
+        if (seen.has(photo.src) || photo.src.includes('COMING SOON')) return;
+        seen.add(photo.src);
+        container.insertAdjacentHTML("beforeend", `
+          <a class="masonry-item" href="${category}.html#${encodeURIComponent(subcat)}">
+            <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
+          </a>
+        `);
+      });
+    }
+  }
+}
+
 function renderIdeasSection() {
   const container = document.getElementById("ideas-container");
   if (!container) {

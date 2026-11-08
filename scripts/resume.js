@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioData = {
         skills: [
             { id: 'react', name: 'React' },
+            { id: 'astro', name: 'Astro.js' },
             { id: 'uiux', name: 'UI/UX' },
             { id: 'next', name: 'Next.js' },
             { id: 'ts', name: 'TypeScript' },
@@ -24,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Debug production issues using Sentry, Datadog, and logs; collaborate with backend teams using Node.js to isolate root causes and unblock releases.',
                     'Contribute through code reviews, pair programming, and mentoring a junior engineer.'
                 ],
-                skills: ['react', 'ts', 'htmlcss', 'uiux'],
+                skills: ['react', 'ts', "astro", 'htmlcss', 'uiux'],
                 projects: [
-                    { icon: '📝', title: 'Editorial Dashboard', description: 'Core product for content creation' }
+                    { icon: '📝', title: 'Editorial Dashboard', description: 'Internal product for content creation and management' }
                 ]
             },
             {
@@ -41,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 skills: ['cv', 'cad', 'python', "next", "uiux"],
                 projects: [
-                    { icon: '🧠', title: 'AI Automation Tool', description: 'Computer vision platform integration' }
+                    { icon: '📊', title: 'Data Analytics Dashboard', description: 'Computer vision platform integration' },
+                    { icon: '🧠', title: 'Computer Vision', description: 'Computer vision platform integration' },
+                    { icon: '🧠', title: 'Computer Vision', description: 'Computer vision platform integration' },
                 ]
             },
             {
@@ -71,18 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 skills: ['next', "react",  "uiux", "testing"],
                 projects: [
-                    { icon: '📊', title: 'Analytics Dashboard', description: 'Data visualization interface' }
+                      { icon: '📝', title: 'Consultant Dashboard', description: 'Internal tool for creating drug analytics' }
+               
                 ]
             }
         ],
-        projects: [
-            {
+        projects: [  {
                 date: '2023-11',
-                title: 'Complex E-commerce Platform',
-                workplace: 'Binariks Inc.',
+                title: 'Guilde Website',
+                workplace: 'Schützengilden Berlin-Charlottenburg.',
                 description: 'A high-performance e-commerce solution serving 100k+ daily users.',
                 image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=300&q=80',
-                skills: ['react', 'next', 'ts']
+                skills: ['wordpress']
             },
            
         ],
@@ -94,33 +97,26 @@ document.addEventListener('DOMContentLoaded', () => {
         talks: [
             {
                 date: '2023-06',
-                title: 'State Management with Apollo',
+                title: 'Hidden Half of the job',
                 description: 'Deep dive into caching, optimistic UI, and local state management.',
                 image: 'https://images.unsplash.com/photo-1475721025505-44753337fd36?auto=format&fit=crop&w=300&q=80',
-                events: ['React Summit 2023', 'JSWorld Conference 2022']
+                events: ['FLINTA Talk Night']
             },
             {
                 date: '2022-09',
-                title: 'Next.js Performance',
+                title: 'Visibility Is Weird',
                 description: 'Strategies for code-splitting, SSR, and reducing bundle sizes.',
                 image: 'https://images.unsplash.com/photo-1551818255-e6e10975ab07?auto=format&fit=crop&w=300&q=80',
-                events: ['React Summit 2023']
+                events: ['𝐍𝐞𝐱𝐭𝐜𝐥𝐨𝐮𝐝 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲 𝐂𝐨𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝟐𝟎𝟐𝟓', "𝐏𝐲𝐃𝐚𝐭𝐚 𝟐𝟎𝟐𝟓"]
             }
         ],
         upcomingEvents: [
             {
-                date: '2024-10',
-                name: 'Frontend Nation',
-                year: '2024 (Upcoming)',
-                role: 'Speaker',
+                date: '2024-07',
+                name: '“𝐖𝐞 𝐀𝐫𝐞 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫𝐬”',
+                year: '2026 (Upcoming)',
+                role: 'Volunteer',
                 image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=300&q=80'
-            },
-            {
-                date: '2024-11',
-                name: 'SmashingConf',
-                year: '2024 (Upcoming)',
-                role: 'Attendee',
-                image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=300&q=80'
             }
         ]
     };

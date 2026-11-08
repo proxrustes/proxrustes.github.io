@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Photography Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../styles/themes/neobrutalism.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/posts.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/header.css" />
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="main-content">
+    <div id="masonry-container" class="masonry-grid"></div>
+  </div>
+  <footer>
+    <h3>NASTYA KUDRIAVTSEVA</h3>
+    <p>instagram: @dee_teppich</p>
+  </footer>
+  <script src="../scripts/populate-photos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      populateMasonry('masonry-container');
+    });
+  </script>
+<script src="../scripts/theme-switcher.js"></script>
+</body>
+
+</html>
