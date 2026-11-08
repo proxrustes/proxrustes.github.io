@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             }
         ],
-        projects: [  {
+        projects: [
+              {
                 date: '2026',
                 title: 'Guilde Website',
                 workplace: 'Schützengilden Berlin-Charlottenburg.',
@@ -80,12 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 date: '2025',
-                title: 'Robotic Hydroponic Cultivation System Based on IoT',
+                title: 'Hydroponics System',
                 workplace: 'NTU of Ukraine "Kyiv Polytechnic Institute"',
                 description: 'Data visualization interface',
-                image: '',
-                skills: ['python', 'cv', 'cad']
-            },
+                image: 'Robotic Hydroponic Cultivation System Based on IoT',
+                skills: ['react', 'python', 'cv', 'ts', 'uiux']
+            }
         ],
         talks: [
             {
@@ -103,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioData.skills.forEach(skill => {
             const span = document.createElement('span');
             span.className = 'skill-tag';
-            span.setAttribute('data-skill', skill.id);
             span.textContent = skill.name;
             skillsContainer.appendChild(span);
         });
@@ -114,12 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioData.timeline.forEach(entry => {
             const item = document.createElement('div');
             item.className = `timeline-item ${entry.type}-item`;
-            
-            if (entry.skills && entry.skills.length > 0) {
-                item.setAttribute('data-skills', entry.skills.join(','));
-            } else {
-                item.setAttribute('data-skills', '');
-            }
 
             const dot = document.createElement('div');
             dot.className = `timeline-dot ${entry.type}-dot`;
@@ -207,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (skillObj) {
                         const skillSpan = document.createElement('span');
                         skillSpan.textContent = skillObj.name;
-                        skillSpan.setAttribute('data-skill-id', skillId);
                         skillsDiv.appendChild(skillSpan);
                     }
                 });
@@ -503,63 +496,4 @@ document.addEventListener('DOMContentLoaded', () => {
             showcaseContainer.innerHTML += item.html;
         });
     }
-
-
-    // Event Listeners for highlighting
-    const skillTags = document.querySelectorAll('.skill-tag');
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    
-    let activeSkill = null;
-
-    skillTags.forEach(tag => {
-        tag.addEventListener('click', () => {
-            const skill = tag.getAttribute('data-skill');
-            
-            // If clicking already active skill, deactivate
-            if (activeSkill === skill) {
-                activeSkill = null;
-                tag.classList.remove('active');
-                timeline.classList.remove('filtering');
-                
-                // Remove highlights
-                timelineItems.forEach(item => {
-                    item.classList.remove('highlight');
-                    const skillSpans = item.querySelectorAll('.item-skills span');
-                    skillSpans.forEach(span => span.classList.remove('skill-match'));
-                });
-            } else {
-                // Deactivate previously active tag
-                skillTags.forEach(t => t.classList.remove('active'));
-                
-                // Activate clicked tag
-                activeSkill = skill;
-                tag.classList.add('active');
-                timeline.classList.add('filtering');
-                
-                // Highlight corresponding timeline items
-                timelineItems.forEach(item => {
-                    const itemSkillsStr = item.getAttribute('data-skills');
-                    const itemSkills = itemSkillsStr ? itemSkillsStr.split(',') : [];
-                    
-                    // Reset internal skill highlights
-                    const skillSpans = item.querySelectorAll('.item-skills span');
-                    skillSpans.forEach(span => span.classList.remove('skill-match'));
-
-                    if (itemSkills.includes(activeSkill)) {
-                        item.classList.add('highlight');
-                        
-                        // Highlight specific skill inside the timeline item
-                        skillSpans.forEach(span => {
-                            if (span.getAttribute('data-skill-id') === activeSkill) {
-                                span.classList.add('skill-match');
-                            }
-                        });
-
-                    } else {
-                        item.classList.remove('highlight');
-                    }
-                });
-            }
-        });
-    });
 });

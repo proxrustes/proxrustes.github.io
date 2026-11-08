@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&family=Rubik+Mono+One&display=swap');
 
 :root {
     --bg-color: #f4f4f0;
@@ -8,7 +8,7 @@
     --primary-color: #000000;
     --accent-color: #bb1010;
     --border-color: #000000;
-    --highlight-bg: #301f02;
+    --highlight-bg: #f89c12;
     --header-bg: #839860;
     --surface-color: #ffffff;
     --inverse-bg: #000000;
@@ -61,8 +61,10 @@ header {
 }
 
 header h1 {
+    font-family: 'Rubik Mono One', 'Public Sans', sans-serif;
     font-size: 3.5rem;
-    font-weight: 900;
+    font-weight: 400;
+    line-height: 1;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
@@ -98,21 +100,7 @@ h2 {
     border: 3px solid var(--border-color);
     padding: 0.5rem 1rem;
     font-weight: 700;
-    cursor: pointer;
     box-shadow: 3px 3px 0px var(--border-color);
-    transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.skill-tag:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px var(--border-color);
-}
-
-.skill-tag.active {
-    background-color: var(--highlight-bg);
-    border-color: var(--border-color);
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px var(--border-color);
 }
 
 /* Timeline */
@@ -192,24 +180,6 @@ h2 {
 .education-dot {
     background-color: var(--education-color);
     border-radius: 0; /* square */
-}
-
-/* Highlighting Logic */
-.timeline.filtering .timeline-item {
-    opacity: 0.3;
-}
-
-.timeline.filtering .timeline-item.highlight {
-    opacity: 1;
-}
-
-.timeline.filtering .timeline-item.highlight .timeline-content {
-    background-color: var(--highlight-bg);
-}
-
-.timeline.filtering .timeline-item.highlight .item-skills span.skill-match {
-    background-color: var(--accent-color);
-    color: var(--text-inverse);
 }
 
 /* Talks */
@@ -315,6 +285,9 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
     .full-width-card {
         flex-direction: column;
     }
