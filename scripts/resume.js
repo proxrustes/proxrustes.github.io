@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Talk "Book" buttons open an email to this address
+    const BOOKING_EMAIL = 'you@example.com';
+
     const portfolioData = {
         skills: [
             { id: 'react', name: 'React' },
@@ -27,13 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 skills: ['react', 'ts', "astro", 'htmlcss', 'uiux'],
                 projects: [
-                    { icon: '📝', title: 'Editorial Dashboard', description: 'Internal product for content creation and management' }
                 ]
             },
             {
                 type: 'work',
                 title: 'Software Engineer',
-                period: 'September 2025 - Present',
+                period: 'September 2025 - April 2026',
                 institution: 'Cerepal.ai',
                 description: [
                     'Developed and maintained responsive web applications using Vue.js.',
@@ -41,11 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Reduced bug count by 25% through rigorous unit testing using Jest.'
                 ],
                 skills: ['cv', 'cad', 'python', "next", "uiux"],
-                projects: [
-                    { icon: '📊', title: 'Data Analytics Dashboard', description: 'Computer vision platform integration' },
-                    { icon: '🧠', title: 'Computer Vision', description: 'Computer vision platform integration' },
-                    { icon: '🧠', title: 'Computer Vision', description: 'Computer vision platform integration' },
-                ]
             },
             {
                 type: 'education',
@@ -55,12 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 institution: 'NTU of Ukraine "Kyiv Polytechnic Institute"',
                 period: '2021 - 2025',
                 description: ['Foundational studies in software engineering, algorithms, and data structures.'],
-                skills: ['python', 'ts', "cv", "cad", "uiux"],
-                 projects: [
-                    { icon: '🌿', title: 'Robotic Hydroponic Cultivation System Based on IoT', description: 'Data visualization interface' },
-                    { icon: '📊', title: 'Hydroponics', description: 'Data visualization interface' },
-                    { icon: '📊', title: 'Hydroponics', description: 'Data visualization interface' },
-                ]
+                skills: ['python', 'ts', "cv", "cad", "uiux"]
             },
             {
                 type: 'work',
@@ -74,49 +66,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 skills: ['next', "react",  "uiux", "testing"],
                 projects: [
-                      { icon: '📝', title: 'Consultant Dashboard', description: 'Internal tool for creating drug analytics' }
                
                 ]
             }
         ],
         projects: [  {
-                date: '2023-11',
+                date: '2026',
                 title: 'Guilde Website',
                 workplace: 'Schützengilden Berlin-Charlottenburg.',
-                description: 'A high-performance e-commerce solution serving 100k+ daily users.',
-                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=300&q=80',
+                description: '',
+                image: 'https://schuetzengilde-berlin.de/wp-content/uploads/2022/05/gildeemblem-transparent-281x300.png',
                 skills: ['wordpress']
             },
-           
-        ],
-        conferences: [
-            { date: '2023-06', name: 'React Summit', year: '2023', role: 'Speaker', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=300&q=80' },
-            { date: '2022-09', name: 'JSWorld Conference', year: '2022', role: 'Speaker', image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=300&q=80' },
-            { date: '2021-03', name: 'VueConf', year: '2021', role: 'Attendee', image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=300&q=80' }
+            {
+                date: '2025',
+                title: 'Robotic Hydroponic Cultivation System Based on IoT',
+                workplace: 'NTU of Ukraine "Kyiv Polytechnic Institute"',
+                description: 'Data visualization interface',
+                image: '',
+                skills: ['python', 'cv', 'cad']
+            },
         ],
         talks: [
             {
-                date: '2023-06',
-                title: 'Hidden Half of the job',
-                description: 'Deep dive into caching, optimistic UI, and local state management.',
-                image: 'https://images.unsplash.com/photo-1475721025505-44753337fd36?auto=format&fit=crop&w=300&q=80',
-                events: ['FLINTA Talk Night']
-            },
-            {
-                date: '2022-09',
-                title: 'Visibility Is Weird',
-                description: 'Strategies for code-splitting, SSR, and reducing bundle sizes.',
-                image: 'https://images.unsplash.com/photo-1551818255-e6e10975ab07?auto=format&fit=crop&w=300&q=80',
-                events: ['𝐍𝐞𝐱𝐭𝐜𝐥𝐨𝐮𝐝 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲 𝐂𝐨𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝟐𝟎𝟐𝟓', "𝐏𝐲𝐃𝐚𝐭𝐚 𝟐𝟎𝟐𝟓"]
-            }
-        ],
-        upcomingEvents: [
-            {
-                date: '2024-07',
-                name: '“𝐖𝐞 𝐀𝐫𝐞 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫𝐬”',
-                year: '2026 (Upcoming)',
-                role: 'Volunteer',
-                image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=300&q=80'
+                title: 'Hidden Part of the Job',
+                description: 'A talk about soft skills: the part of an engineer\'s job that never makes it into the job description.'
             }
         ]
     };
@@ -247,9 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Render Showcase (Projects, Talks, Conferences)
+    // Render Showcase (Talks, Projects)
     const showcaseContainer = document.getElementById('showcase-container');
-    const upcomingContainer = document.getElementById('upcoming-container');
+    const talksContainer = document.getElementById('talks-container');
     const categoryNav = document.getElementById('category-nav');
     const photographyContent = document.getElementById('photography-content');
 
@@ -474,19 +448,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (showcaseContainer && upcomingContainer) {
-        const createFullWidthCard = (title, subtitle, desc, extra, imageUrl, category, dateStr) => {
+    if (showcaseContainer && talksContainer) {
+        const createFullWidthCard = (title, subtitle, desc, extra, imageUrl, dateStr) => {
             // Optional: format date string if desired, or just use as a label.
-            const dateBadge = dateStr ? `<span class="date-badge" style="float: right; font-size: 0.8rem; color: #888;">${dateStr}</span>` : '';
+            const dateBadge = dateStr ? `<span class="date-badge">${dateStr}</span>` : '';
             return `
                 <div class="full-width-card">
                     ${imageUrl ? `<div class="card-image-wrapper"><img src="${imageUrl}" alt="${title}" class="full-card-img" /></div>` : ''}
                     <div class="full-card-content">
-                        <div>
-                            <span class="category-label">${category}</span>
+                        <div class="card-header">
+                            <h3>${title}</h3>
                             ${dateBadge}
                         </div>
-                        <h3>${title}</h3>
                         ${subtitle ? `<span class="workplace-badge">${subtitle}</span>` : ''}
                         ${desc ? `<p>${desc}</p>` : ''}
                         ${extra ? `<div class="extra-info">${extra}</div>` : ''}
@@ -495,42 +468,37 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         };
 
-        // Render Upcoming Events first
-        // Sort them by date ascending (closest first)
-        const sortedUpcoming = [...portfolioData.upcomingEvents].sort((a, b) => a.date.localeCompare(b.date));
-        sortedUpcoming.forEach(e => {
-            upcomingContainer.innerHTML += createFullWidthCard(e.name, '', '', `${e.year} - ${e.role}`, e.image, 'Upcoming Event', e.date);
+        // Render Talks first, newest first
+        const sortedTalks = [...portfolioData.talks].sort((a, b) => b.date.localeCompare(a.date));
+        sortedTalks.forEach(t => {
+            const mailto = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(`Talk booking: ${t.title}`)}`;
+            talksContainer.innerHTML += `
+                <div class="full-width-card">
+                    <div class="full-card-content">
+                        <div class="card-header">
+                            <h3 class="talk-title">${t.title}</h3>
+                            <a class="book-button" href="${mailto}">Book</a>
+                        </div>
+                        <p>${t.description}</p>
+                    </div>
+                </div>
+            `;
         });
 
-        // Combine Past Projects, Talks, Conferences
+        // Past Projects
         let combinedPast = [];
         
         portfolioData.projects.forEach(p => {
             combinedPast.push({
                 date: p.date,
-                html: createFullWidthCard(p.title, p.workplace, p.description, '', p.image, 'Project', p.date)
+                html: createFullWidthCard(p.title, p.workplace, p.description, '', p.image, p.date)
             });
         });
         
-        portfolioData.talks.forEach(t => {
-            const eventsHtml = t.events.map(e => `<span class="event-tag">${e}</span>`).join('');
-            combinedPast.push({
-                date: t.date,
-                html: createFullWidthCard(t.title, '', t.description, eventsHtml, t.image, 'Talk', t.date)
-            });
-        });
-        
-        portfolioData.conferences.forEach(c => {
-            combinedPast.push({
-                date: c.date,
-                html: createFullWidthCard(c.name, '', '', `${c.year} - ${c.role}`, c.image, 'Conference', c.date)
-            });
-        });
-
-        // Sort past events by date descending (newest first)
+        // Sort past projects by date descending (newest first)
         combinedPast.sort((a, b) => b.date.localeCompare(a.date));
 
-        // Render sorted past events
+        // Render sorted past projects
         combinedPast.forEach(item => {
             showcaseContainer.innerHTML += item.html;
         });

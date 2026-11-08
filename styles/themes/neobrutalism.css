@@ -3,10 +3,19 @@
 :root {
     --bg-color: #f4f4f0;
     --text-color: #000000;
+    --text-inverse: #ffffff;
+
     --primary-color: #000000;
-    --accent-color: #ff4949;
+    --accent-color: #bb1010;
     --border-color: #000000;
-    --highlight-bg: #ffe600;
+    --highlight-bg: #301f02;
+    --header-bg: #839860;
+    --surface-color: #ffffff;
+    --inverse-bg: #000000;
+    --info-color: #f89c12;
+    --muted-bg: #e2e8f0;
+    --education-bg: #f0f9e1;
+    --education-color: #839860;
 }
 
 * {
@@ -47,7 +56,7 @@ header {
     text-align: left;
     border: 4px solid var(--border-color);
     padding: 2rem;
-    background-color: #a3e635;
+    background-color: var(--header-bg);
     box-shadow: 8px 8px 0px var(--border-color);
 }
 
@@ -69,8 +78,8 @@ h2 {
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     text-transform: uppercase;
-    background: #ff4949;
-    color: #fff;
+    background: var(--highlight-bg);
+    color: var(--text-inverse);
     padding: 0.5rem 1rem;
     border: 4px solid var(--border-color);
     box-shadow: 4px 4px 0px var(--border-color);
@@ -85,7 +94,7 @@ h2 {
 }
 
 .skill-tag {
-    background-color: #fff;
+    background-color: var(--surface-color);
     border: 3px solid var(--border-color);
     padding: 0.5rem 1rem;
     font-weight: 700;
@@ -133,12 +142,12 @@ h2 {
     top: 0;
     width: 24px;
     height: 24px;
-    background-color: #38bdf8;
+    background-color: var(--info-color);
     border: 4px solid var(--border-color);
 }
 
 .timeline-content {
-    background: #fff;
+    background: var(--surface-color);
     padding: 1.5rem;
     border: 4px solid var(--border-color);
     box-shadow: 6px 6px 0px var(--border-color);
@@ -155,7 +164,7 @@ h2 {
     font-size: 1rem;
     font-weight: 700;
     background: var(--border-color);
-    color: #fff;
+    color: var(--text-inverse);
     padding: 0.2rem 0.5rem;
     margin-bottom: 1rem;
 }
@@ -170,18 +179,18 @@ h2 {
 .item-skills span {
     font-size: 0.85rem;
     font-weight: 700;
-    background: #e2e8f0;
+    background: var(--muted-bg);
     border: 2px solid var(--border-color);
     padding: 0.2rem 0.5rem;
 }
 
 /* Education Specific Styling */
 .education-content {
-    background: #fdf4ff;
+    background: var(--education-bg);
     border-radius: 0;
 }
 .education-dot {
-    background-color: #f472b6;
+    background-color: var(--education-color);
     border-radius: 0; /* square */
 }
 
@@ -200,11 +209,44 @@ h2 {
 
 .timeline.filtering .timeline-item.highlight .item-skills span.skill-match {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-inverse);
+}
+
+/* Talks */
+.talks-section h2 {
+    background: var(--accent-color);
+    color: var(--text-inverse);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.talk-title {
+    font-weight: 700;
+    font-size: x-large;
+}
+.book-button {
+    flex-shrink: 0;
+    background: var(--accent-color);
+    color: var(--text-inverse);
+    font-weight: 900;
+    text-decoration: none;
+    padding: 0.2rem 0.6rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.book-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--border-color);
 }
 
 /* Showcase Full-Width Cards */
-#showcase-container, #upcoming-container {
+#showcase-container, #talks-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -212,7 +254,7 @@ h2 {
 .full-width-card {
     display: flex;
     flex-direction: row;
-    background: #fff;
+    background: var(--surface-color);
     border: 4px solid var(--border-color);
     box-shadow: 8px 8px 0px var(--border-color);
     padding: 1rem;
@@ -240,47 +282,31 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.category-label {
-    display: inline-block;
-    background: #a855f7;
-    color: #fff;
-    font-weight: 900;
-    padding: 0.2rem 0.5rem;
-    border: 2px solid var(--border-color);
-    margin-bottom: 1rem;
+    justify-content: flex-start;
 }
 .full-card-content h3 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: 900;
 }
+.card-header h3 {
+    margin-bottom: 0;
+}
 .workplace-badge {
     display: inline-block;
-    background: #38bdf8;
-    color: #000;
+    background: var(--info-color);
+    color: var(--text-color);
     font-weight: 700;
     padding: 0.2rem 0.6rem;
     border: 2px solid var(--border-color);
     margin-bottom: 1rem;
     align-self: flex-start;
 }
-.event-tag {
-    display: inline-block;
-    background: #fbbf24;
-    color: #000;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border: 2px solid var(--border-color);
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-}
 .date-badge {
-    float: right;
+    flex-shrink: 0;
     font-weight: 900;
-    background: #000;
-    color: #fff;
+    background: var(--inverse-bg);
+    color: var(--text-inverse);
     padding: 0.2rem 0.5rem;
 }
 .extra-info {
@@ -301,7 +327,7 @@ h2 {
 
 /* Poems */
 .poem-card {
-    background: #fff;
+    background: var(--surface-color);
     border: 4px solid var(--border-color);
     box-shadow: 8px 8px 0px var(--border-color);
     padding: 1.5rem;
@@ -321,13 +347,13 @@ h2 {
     font-weight: 700;
     margin-top: 1rem;
     background: var(--accent-color);
-    color: #fff;
+    color: var(--text-inverse);
     display: inline-block;
     padding: 0.2rem 0.5rem;
     border: 2px solid var(--border-color);
 }
 .form-group input, .form-group select {
-    background: #fff;
+    background: var(--surface-color);
     border: 3px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem;
@@ -355,7 +381,7 @@ h2 {
     gap: 0.75rem;
 }
 .timeline-project-block {
-    background: #fff;
+    background: var(--surface-color);
     border: 3px solid var(--text-color);
     box-shadow: 3px 3px 0 var(--text-color);
     padding: 0.75rem;
