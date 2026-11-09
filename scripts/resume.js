@@ -71,14 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ],
         projects: [
-              {
-                date: '2026',
-                title: 'Guilde Website',
-                workplace: 'Schützengilden Berlin-Charlottenburg.',
-                description: '',
-                image: 'https://schuetzengilde-berlin.de/wp-content/uploads/2022/05/gildeemblem-transparent-281x300.png',
-                skills: ['wordpress']
-            },
             {
                 date: '2025',
                 title: 'Hydroponics System',
